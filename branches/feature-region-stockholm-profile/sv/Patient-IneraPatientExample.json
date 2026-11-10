@@ -1,0 +1,30 @@
+{
+  "resourceType" : "Patient",
+  "id" : "IneraPatientExample",
+  "meta" : {
+    "profile" : ["https://fhir.inera.se/ig/template/StructureDefinition/IneraPatient"]
+  },
+  "language" : "sv",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Genererad berättande text: Patient IneraPatientExample</b></p><a name=\"IneraPatientExample\"> </a><a name=\"hcIneraPatientExample\"> </a><div style=\"display: inline-block; background-color: #fbffeb; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\"/><p style=\"margin-bottom: 0px\">Profil: <a href=\"StructureDefinition-IneraPatient.html\">Inera Patient</a></p></div><p style=\"border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;\">Anna Andersson (official) Female, Födelsedatum: 1950-01-01 ( http://electronichealth.se/identifier/personnummer#195001011234)</p><hr/><table class=\"grid\"><tr><td style=\"background-color: #f3f5da\" title=\"Sätt att kontakta patienten\">Kontaktuppgift</td><td colspan=\"3\">Testgatan 1 Stockholm 11122 SE (home)</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://electronichealth.se/identifier/personnummer",
+    "value" : "195001011234"
+  }],
+  "name" : [{
+    "use" : "official",
+    "family" : "Andersson",
+    "given" : ["Anna"]
+  }],
+  "gender" : "female",
+  "birthDate" : "1950-01-01",
+  "address" : [{
+    "use" : "home",
+    "line" : ["Testgatan 1"],
+    "city" : "Stockholm",
+    "postalCode" : "11122",
+    "country" : "SE"
+  }]
+}

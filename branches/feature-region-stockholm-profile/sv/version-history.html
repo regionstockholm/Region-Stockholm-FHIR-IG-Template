@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+
+
+
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>Versionshistorik - Inera FHIR Implementation Guide Template v2.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <link href="assets/css/liquid.css" rel="stylesheet" />
+    <link href="assets/css/project.css" rel="stylesheet"/>
+  	<link href="region-stockholm.css" rel="stylesheet"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="shortcut icon" href="favicon.svg"/>
+
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+    <script type="text/javascript" src="assets/js/direction-management.js"> </script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="fhir-logo" sizes="144x144" href="assets/ico/icon-fhir-144.png"/>
+    <link rel="fhir-logo" sizes="114x114" href="assets/ico/icon-fhir-114.png"/>
+    <link rel="fhir-logo" sizes="72x72" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script type="text/javascript" src="assets/js/prism.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-fhirpath.js"></script>
+	  <script type="text/javascript" src="assets/js/prism-cql.js"></script>
+    <script type="text/javascript" src="assets/js/mermaid-init.js"></script>
+    <style type="text/css">h2{--heading-prefix:"15"}
+    h3,h4,h5,h6{--heading-prefix:"15"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+
+        <div id="rs-nav">
+  <a id="rs-logo" data-no-external="true" href="https://www.regionstockholm.se">
+    <img height="50" alt="Region Stockholm" src="Region_Stockholm_vit_frizon.svg"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera FHIR Implementation Guide Template</span>
+            <br/>
+            <span style="display:inline-block;">2.3.0 - ci-build
+
+
+
+  <img alt="Sweden flagga" src="../assets/images/swe.svg" height="16" title="Sweden"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li><a href="introduction.html">Inledning</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Funktionellt<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="information-basis.html">Informationsunderlag</a></li>
+      <li><a href="use-cases.html">Användningsfall</a></li>
+      <li><a href="roles-and-responsibilities.html">Roller och ansvar</a></li>
+      <li><a href="mappings.html">Mappning till profiler</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementering<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="rest-interactions.html">REST-interaktioner och sökparametrar</a></li>
+      <li><a href="expected-responses.html">Förväntade svar</a></li>
+      <li><a href="capabilitystatement.html">CapabilityStatement</a></li>
+      <li><a href="error-handling.html">Felhantering</a></li>
+      <li><a href="security.html">Säkerhet och behörighet</a></li>
+      <li><a href="testing.html">Testning och validering</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Om<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="about.html">Styrning och förvaltning</a></li>
+      <li><a href="downloads.html">Nedladdningar</a></li>
+      <li><a href="version-history.html">Versionshistorik</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artefakter</a></li>
+  <li><a href="https://fhir.inera.se/" target="_blank" rel="noopener">FHIR på Inera <span aria-hidden="true">&#8599;</span></a></li>
+</ul>
+
+            </div>  <!-- /.nav-collapse -->
+
+              
+
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Versionshistorik</b></li>
+
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Inera FHIR Implementation Guide Template - Lokal utvecklingsbygge (v2.3.0) byggt av FHIR (HL7® FHIR® Standard) Build Tools. Se <a href='https://fhir.inera.se/ig/template/history.html'>katalogen över publicerade versioner</a></p><!--EndReleaseHeader-->
+  <h2>Versionshistorik</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#230--2026-10-20" id="markdown-toc-230--2026-10-20">[2.3.0] — 2026-10-20</a></li>
+  <li><a href="#222--2026-10-15" id="markdown-toc-222--2026-10-15">[2.2.2] — 2026-10-15</a></li>
+  <li><a href="#221--2026-08-27" id="markdown-toc-221--2026-08-27">[2.2.1] — 2026-08-27</a></li>
+  <li><a href="#220--2026-08-27" id="markdown-toc-220--2026-08-27">[2.2.0] — 2026-08-27</a></li>
+  <li><a href="#200--2026-06-25" id="markdown-toc-200--2026-06-25">[2.0.0] — 2026-06-25</a></li>
+  <li><a href="#101--2026-06-24" id="markdown-toc-101--2026-06-24">[1.0.1] — 2026-06-24</a></li>
+  <li><a href="#100--2026-06-24" id="markdown-toc-100--2026-06-24">[1.0.0] — 2026-06-24</a></li>
+  <li><a href="#010--2026-06-16" id="markdown-toc-010--2026-06-16">[0.1.0] — 2026-06-16</a></li>
+</ul>
+
+</div>
+<p>Den här sidan beskriver vad som har ändrats i varje version. Listan över alla publicerade versioner nås via länken i bannern överst på varje sida.</p>
+
+<hr />
+
+<h3 id="230--2026-10-20">[2.3.0] — 2026-10-20</h3>
+
+<h4 id="features">Features</h4>
+
+<ul>
+  <li>Releaser publiceras med IG Publishers officiella publiceringsläge
+(<code class="language-plaintext highlighter-rouge">-go-publish</code>) till den gemensamma webbroten på fhir.inera.se.
+Publishern skriver versionshistoriken (<code class="language-plaintext highlighter-rouge">history.html</code> och
+<code class="language-plaintext highlighter-rouge">package-list.json</code>), paket- och publiceringsflödena och IG:ns post i
+FHIR:s IG-register, och sätter releasebannern på alla sidor, även i
+tidigare versioner</li>
+  <li>Ny workflow <code class="language-plaintext highlighter-rouge">release.yml</code>. Releasetaggar skrivs utan <code class="language-plaintext highlighter-rouge">v</code>, till exempel
+<code class="language-plaintext highlighter-rouge">2.3.0</code>. Manuella körningar publicerar till testwebbroten
+<code class="language-plaintext highlighter-rouge">inera-ab/fhir-portal-test</code></li>
+  <li><code class="language-plaintext highlighter-rouge">publication-request.json</code> beskriver varje release. Paket-id, version
+och sökväg fylls i från <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">package-list.json</code> finns inte längre i IG-repot. Den hålls av publishern
+i webbroten</li>
+  <li><code class="language-plaintext highlighter-rouge">publish.yml</code> bygger bara brancher</li>
+  <li>release-please är borttaget. Versionen räknas upp för hand i <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code>, med en post här och en <code class="language-plaintext highlighter-rouge">desc</code> i <code class="language-plaintext highlighter-rouge">publication-request.json</code></li>
+  <li>Workflowsen i <code class="language-plaintext highlighter-rouge">.github/workflows/</code> anropar de delade workflowsen i <code class="language-plaintext highlighter-rouge">Inera-AB/fhir-ig-workflows</code></li>
+</ul>
+
+<hr />
+
+<h3 id="222--2026-10-15">[2.2.2] — 2026-10-15</h3>
+
+<h4 id="bug-fixes">Bug Fixes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">menu.xml</code> innehöll samma omslutande element (<code class="language-plaintext highlighter-rouge">#segment-navbar</code>,
+<code class="language-plaintext highlighter-rouge">#stripe</code>, <code class="language-plaintext highlighter-rouge">container</code> och <code class="language-plaintext highlighter-rouge">nav</code>) som templatet redan lägger runt menyn.
+Det gav dubbla id:n på varje sida och varningen <code class="language-plaintext highlighter-rouge">HTML_DUPLICATE_ID</code> i
+QA-rapporten. Filen innehåller nu bara <code class="language-plaintext highlighter-rouge">&lt;ul class="nav navbar-nav"&gt;</code></li>
+  <li>Varje sida i <code class="language-plaintext highlighter-rouge">input/pagecontent/</code> började med en egen <code class="language-plaintext highlighter-rouge"># Rubrik</code>, men
+templatet visar redan sidans titel som <code class="language-plaintext highlighter-rouge">&lt;h2&gt;</code>. IG Publisher 3.0 rapporterar
+det som ett fel, eftersom sidans första rubrik måste vara dess högsta nivå.
+Raden är borttagen; titeln styrs av <code class="language-plaintext highlighter-rouge">pages</code> i <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code></li>
+  <li>Övriga rubriker följer samma regel: versionerna i versionshistoriken är
+<code class="language-plaintext highlighter-rouge">###</code> och avsnitten <code class="language-plaintext highlighter-rouge">####</code>, och mallrubriken i <code class="language-plaintext highlighter-rouge">use-cases.md</code> är <code class="language-plaintext highlighter-rouge">###</code>
+i stället för <code class="language-plaintext highlighter-rouge">####</code>, så att ingen nivå hoppas över</li>
+</ul>
+
+<hr />
+
+<h3 id="221--2026-08-27">[2.2.1] — 2026-08-27</h3>
+
+<h4 id="bug-fixes-1">Bug Fixes</h4>
+
+<ul>
+  <li>Reservindexet som byggs när IG Publisher inte genererar <code class="language-plaintext highlighter-rouge">history.html</code>
+skrevs bara till <code class="language-plaintext highlighter-rouge">index.html</code>. Publishern stämplar in en länk till
+<code class="language-plaintext highlighter-rouge">&lt;canonical&gt;/history.html</code> på varje sida, så den länken gav 404 medan
+<code class="language-plaintext highlighter-rouge">&lt;canonical&gt;/</code> fungerade. Filen skrivs nu under båda namnen</li>
+</ul>
+
+<hr />
+
+<h3 id="220--2026-08-27">[2.2.0] — 2026-08-27</h3>
+
+<p>Version 2.1.0 sattes i <code class="language-plaintext highlighter-rouge">sushi-config.yaml</code> men släpptes aldrig — den fick
+ingen tagg och ingen changelog-post. Ändringarna därifrån ingår i den här
+releasen.</p>
+
+<h4 id="features-1">Features</h4>
+
+<ul>
+  <li>Byte till <code class="language-plaintext highlighter-rouge">fhir2.base.template</code>, HL7:s språkmedvetna bastemplate. Sidorna
+genereras under <code class="language-plaintext highlighter-rouge">output/sv/</code> med en omdirigering i roten, och template-
+texterna följer språkinställningen</li>
+  <li>Omstrukturerad meny: Hem, Inledning, Funktionellt, Implementering, Om och
+Artefakter, med nya sidor för användningsfall, roller och ansvar,
+REST-interaktioner, förväntade svar, felhantering, säkerhet och testning</li>
+  <li>Vägledande kommentarer för profilering inbäddade i exempelprofilen</li>
+  <li>QA-skriptet utbrutet till <code class="language-plaintext highlighter-rouge">.github/scripts/qa-comment.js</code> med en testsvit
+som körs vid varje push och pull request</li>
+</ul>
+
+<h4 id="bug-fixes-2">Bug Fixes</h4>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">i18n-default-lang</code> ersätter det felstavade <code class="language-plaintext highlighter-rouge">i18n-default-language</code>, som
+publishern ignorerade tyst. Det var orsaken till att ett tidigare försök
+med fhir2 lade alla sidor under <code class="language-plaintext highlighter-rouge">/en</code> trots att svenska var konfigurerat</li>
+  <li>QA-kommentaren rapporterade noll fel och noll varningar för bygget som
+hade sex varningar. Siffrorna hämtas nu från publisherns egen summering i
+<code class="language-plaintext highlighter-rouge">build.log</code> och detaljerna från <code class="language-plaintext highlighter-rouge">output/qa.txt</code>; en trasig eller saknad
+källa redovisas öppet i stället för att visas som ett rent bygge</li>
+  <li><code class="language-plaintext highlighter-rouge">history.html</code> söks även i språkkatalogen, så releasesteget använder
+publisherns riktiga versionslista i stället för reservindexet</li>
+  <li>Nedladdningslänken pekar på canonical och paketet kopieras till IG-roten
+vid release</li>
+  <li>Platshållaren <code class="language-plaintext highlighter-rouge">&lt;namn&gt;</code> i <code class="language-plaintext highlighter-rouge">index.md</code> tolkades som ett HTML-element</li>
+</ul>
+
+<hr />
+
+<h3 id="200--2026-06-25">[2.0.0] — 2026-06-25</h3>
+
+<h4 id="features-2">Features</h4>
+
+<ul>
+  <li>Svenska sidtexter och menyrubriker i alla mallsidor</li>
+  <li>Återgång till <code class="language-plaintext highlighter-rouge">fhir.base.template</code> (eliminerar <code class="language-plaintext highlighter-rouge">/en</code>-routing och aktiv bugg i fhir2.base.template)</li>
+  <li><code class="language-plaintext highlighter-rouge">i18n-default-language: sv</code> konfigurerat</li>
+</ul>
+
+<hr />
+
+<h3 id="101--2026-06-24">[1.0.1] — 2026-06-24</h3>
+
+<h4 id="bug-fixes-3">Bug Fixes</h4>
+
+<ul>
+  <li>Read IG metadata from build output instead of sushi-config.yaml</li>
+  <li>Fix <code class="language-plaintext highlighter-rouge">is_release</code> flag in fhir-portal dispatch to use tag ref check</li>
+  <li>Align dispatch payload fields with fhir-portal registry workflow</li>
+</ul>
+
+<hr />
+
+<h3 id="100--2026-06-24">[1.0.0] — 2026-06-24</h3>
+
+<h4 id="features-3">Features</h4>
+
+<ul>
+  <li>Multi-branch CI: <code class="language-plaintext highlighter-rouge">develop</code>, <code class="language-plaintext highlighter-rouge">feature/**</code> and <code class="language-plaintext highlighter-rouge">support/&lt;M&gt;.x</code> branches each build and deploy to their own subdirectory</li>
+  <li>fhir-portal integration: optionally push built IG to <code class="language-plaintext highlighter-rouge">inera-ab/fhir-portal</code> and notify index rebuild via <code class="language-plaintext highlighter-rouge">repository_dispatch</code></li>
+  <li>QA report posted as PR comment by <code class="language-plaintext highlighter-rouge">pr-qa.yml</code></li>
+  <li><code class="language-plaintext highlighter-rouge">cleanup.yml</code> removes build directories for deleted branches</li>
+  <li><code class="language-plaintext highlighter-rouge">release-please.yml</code> for automated version bumping and changelog (manual trigger)</li>
+  <li>WCAG 2.1 AA accessibility fixes in <code class="language-plaintext highlighter-rouge">inera.css</code></li>
+</ul>
+
+<hr />
+
+<h3 id="010--2026-06-16">[0.1.0] — 2026-06-16</h3>
+
+<h4 id="features-4">Features</h4>
+
+<ul>
+  <li>Initial IG template structure with Inera branding</li>
+  <li><code class="language-plaintext highlighter-rouge">IneraPatient</code> example profile with personnummer identifier slice</li>
+  <li>Navigation pages: Workflow, Logical Models, Mappings, Examples, Terminology, Downloads</li>
+  <li>GitHub Actions for SUSHI validation, full IG Publisher build, and GitHub Pages deployment</li>
+  <li>ig-registry integration via <code class="language-plaintext highlighter-rouge">package-list.json</code></li>
+  <li>WCAG 2.1 AA-compliant CSS</li>
+</ul>
+
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+  <script type="text/javascript" src="assets/js/flags.js"> </script>
+
+  <script type="text/javascript" src="assets/js/window-hash.js"> </script>
+  <script type="text/javascript" src="assets/js/togglechanges.js"> </script>
+  <script type="text/javascript" src="assets/js/requirements-table.js"> </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container" data-fhir="generated">  <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG © 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.core.template#2.3.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-10 14:23:00 +0000">
+    2026-11-10
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor-hover.js"> </script>
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

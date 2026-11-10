@@ -1,0 +1,34 @@
+# inera.core.template#2.3.0: Inera FHIR Implementation Guide Template(sv)
+
+## Pages
+
+* [Hem](sv/index.md)
+* [Nedladdningar](sv/downloads.md)
+* [Testning och validering](sv/testing.md)
+* [Förväntade svar](sv/expected-responses.md)
+* [CapabilityStatement](sv/capabilitystatement.md)
+* [Felhantering](sv/error-handling.md)
+* [Sammanfattning av artefakter](sv/artifacts.md)
+* [Användningsfall](sv/use-cases.md)
+* [Informationsunderlag](sv/information-basis.md)
+* [REST-interaktioner och sökparametrar](sv/rest-interactions.md)
+* [Versionshistorik](sv/version-history.md)
+* [Inledning](sv/introduction.md)
+* [Om](sv/about.md)
+* [Mappning till profiler](sv/mappings.md)
+* [Roller och ansvar](sv/roles-and-responsibilities.md)
+* [Säkerhet och behörighet](sv/security.md)
+
+## Resources
+
+### Resource Profiles
+
+* [Inera Patient](sv/StructureDefinition-IneraPatient.md)
+
+### ImplementationGuides
+
+* [Inera FHIR Implementation Guide Template](sv/ImplementationGuide-inera.core.template.md)
+
+### Examples
+
+* [IneraPatientExample (Patient)](sv/Patient-IneraPatientExample.md)

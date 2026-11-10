@@ -1,0 +1,331 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="sv" xmlns="http://www.w3.org/1999/xhtml" lang="sv" dir="ltr">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Mappning till profiler - Inera FHIR Implementation Guide Template v2.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+    <link rel="stylesheet" href="assets/css/liquid.css"/>
+    <link rel="stylesheet" href="assets/css/project.css"/>
+  	<link rel="stylesheet" href="region-stockholm.css"/>
+<link rel="icon" href="favicon.svg" type="image/svg+xml"/>
+<link rel="shortcut icon" href="favicon.svg"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+    <script src="assets/js/direction-management.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-fhirpath.js" type="text/javascript"></script>
+	  <script src="assets/js/prism-cql.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"6"}
+    h3,h4,h5,h6{--heading-prefix:"6"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+
+        <div id="rs-nav">
+  <a id="rs-logo" href="https://www.regionstockholm.se" data-no-external="true">
+    <img src="Region_Stockholm_vit_frizon.svg" alt="Region Stockholm" height="50"/>
+  </a>
+</div>
+
+
+        <div id="ig-status" data-fhir="generated">
+          <p><span style="font-size:12pt;font-weight:bold">Inera FHIR Implementation Guide Template</span>
+            <br/>
+            <span style="display:inline-block;">2.3.0 - ci-build
+
+
+
+  <img src="../assets/images/swe.svg" alt="Sweden flagga" title="Sweden" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment" data-fhir="generated">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+  <li><a href="index.html">Hem</a></li>
+  <li><a href="introduction.html">Inledning</a></li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Funktionellt<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="information-basis.html">Informationsunderlag</a></li>
+      <li><a href="use-cases.html">Användningsfall</a></li>
+      <li><a href="roles-and-responsibilities.html">Roller och ansvar</a></li>
+      <li><a href="mappings.html">Mappning till profiler</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementering<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="rest-interactions.html">REST-interaktioner och sökparametrar</a></li>
+      <li><a href="expected-responses.html">Förväntade svar</a></li>
+      <li><a href="capabilitystatement.html">CapabilityStatement</a></li>
+      <li><a href="error-handling.html">Felhantering</a></li>
+      <li><a href="security.html">Säkerhet och behörighet</a></li>
+      <li><a href="testing.html">Testning och validering</a></li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Om<b class="caret"> </b></a>
+    <ul class="dropdown-menu">
+      <li><a href="about.html">Styrning och förvaltning</a></li>
+      <li><a href="downloads.html">Nedladdningar</a></li>
+      <li><a href="version-history.html">Versionshistorik</a></li>
+    </ul>
+  </li>
+  <li><a href="artifacts.html">Artefakter</a></li>
+  <li><a rel="noopener" href="https://fhir.inera.se/" target="_blank">FHIR på Inera <span aria-hidden="true">↗</span></a></li>
+</ul>
+
+            </div>    <!-- /.nav-collapse -->
+
+              
+
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment" data-fhir="generated">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Mappning till profiler</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">Inera FHIR Implementation Guide Template - Lokal utvecklingsbygge (v2.3.0) byggt av FHIR (HL7&reg; FHIR&reg; Standard) Build Tools. Se <a href="https://fhir.inera.se/ig/template/history.html">katalogen över publicerade versioner</a></p>  <!-- EndReleaseHeader -->
+  <h2>Mappning till profiler</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#omfattade-delar" id="markdown-toc-omfattade-delar">Omfattade delar</a></li>
+  <li><a href="#avvikelser-och-tillägg" id="markdown-toc-avvikelser-och-tillägg">Avvikelser och tillägg</a></li>
+  <li><a href="#syfte-med-mappningarna" id="markdown-toc-syfte-med-mappningarna">Syfte med mappningarna</a></li>
+  <li><a href="#mappningstabeller" id="markdown-toc-mappningstabeller">Mappningstabeller</a></li>
+  <li><a href="#omappade-element" id="markdown-toc-omappade-element">Omappade element</a></li>
+</ul>
+
+</div>
+<p>Denna sida dokumenterar vilka delar av informationsunderlaget (se <a href="information-basis.html">Informationsunderlag</a>) som denna IG realiserar, eventuella avvikelser i FHIR-realiseringen, samt hur enskilda element mappas till element i motsvarande FHIR-profiler.</p>
+
+<hr/>
+
+<h3 id="omfattade-delar">Omfattade delar</h3>
+
+<p><em>Ange vilka kapitel, processer eller entiteter i informationsspecifikationen som denna IG realiserar i FHIR.</em></p>
+
+<hr/>
+
+<h3 id="avvikelser-och-tillägg">Avvikelser och tillägg</h3>
+
+<p><em>Beskriv eventuella avvikelser från eller tillägg till informationsspecifikationen i FHIR-realiseringen, och motivera varför.</em></p>
+
+<hr/>
+
+<h3 id="syfte-med-mappningarna">Syfte med mappningarna</h3>
+
+<p><em>Förklara rollen för dessa mappningar. Exempel: "Mappningarna nedan spårar varje element i informationsmodellen till det FHIR-profilelement som bär den informationen. Detta gör det möjligt att verifiera täckning och vägleder implementatörer som behöver förstå sambandet mellan verksamhetskrav och deras tekniska representation."</em></p>
+
+<hr/>
+
+<h3 id="mappningstabeller">Mappningstabeller</h3>
+
+<p><em>Tillhandahåll en mappningstabell per informationsmodell/entitet. Varje rad ska visa ett modellelement, dess kardinalitet och motsvarande FHIR-profilsökväg. Om denna IG definierar egna logiska modeller i FSH (<code class="language-plaintext highlighter-rouge">input/fsh/logicalmodels/</code>), länka till respektive genererade StructureDefinition-sida.</em></p>
+
+<h4 id="modellens-namn--profilnamn">[Modellens namn] → [Profilnamn]</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modellelement</th>
+      <th>Kard.</th>
+      <th>FHIR-profilelement</th>
+      <th>Noteringar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>[Elementnamn]</em></td>
+      <td><em>1..1</em></td>
+      <td><em><a name="l440">​</a><a href="StructureDefinition-[Profil].html">Profil.element</a></em></td>
+      <td><em>Noteringar om mappningen, t.ex. värdemängdsbegränsningar eller transformationsregler.</em></td>
+    </tr>
+    <tr>
+      <td><em>[Elementnamn]</em></td>
+      <td><em>0..*</em></td>
+      <td><em><a name="l460">​</a><a href="StructureDefinition-[Profil].html">Profil.element</a></em></td>
+      <td>&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<h3 id="omappade-element">Omappade element</h3>
+
+<p><em>Om element i informationsunderlaget inte täcks av ett profilelement, lista dem här och förklara varför (utanför scope, uppskjutet till framtida version, täcks av separat profil, etc.).</em></p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Modellelement</th>
+      <th>Orsak till att det inte mappas</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><em>[Elementnamn]</em></td>
+      <td><em>Förklaring.</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<hr/>
+
+<blockquote>
+  <p><strong>Vägledning för författare:</strong> Håll mappningarna uppdaterade i takt med att profilerna utvecklas. Mappningar kan också uttryckas med FHIR <code class="language-plaintext highlighter-rouge">ConceptMap</code>-resurser om maskinbearbetningsbar representation behövs.</p>
+</blockquote>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+  <script src="assets/js/flags.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <script src="assets/js/togglechanges.js" type="text/javascript"> </script>
+  <script src="assets/js/requirements-table.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container" data-fhir="generated">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+
+
+
+          IG &copy; 2024+ <a style="color:var(--footer-hyperlink-text-color)" href="https://www.inera.se">Inera AB</a>.  
+          Paket inera.core.template#2.3.0 baserat på <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>.
+          Genererad 
+  <span title="2026-11-10 14:23:00 +0000">
+    2026-11-10
+  </span>
+
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Länkar: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Innehållsförteckning</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="../qa.html">QA-rapport</a>
+                 
+                
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
