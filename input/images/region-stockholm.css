@@ -1,60 +1,59 @@
 /*
- * Inera FHIR IG Template - Custom Styles
- * Baserat på Ineras grafiska profil 2023-07-21
- * https://www.inera.se/redaktor/ineras-varumarkesmanual/grafisk-profil/
+ * Region Stockholm FHIR IG Template - Custom Styles
+ * Grafisk profil baserad på Region Stockholms logotyp och färger (marinblå #002D5A)
  */
 
 /* ═══════════════════════════════════════════════════════════════════════════
-   FÄRGVARIABLER - Ineras färgpalett
+   FÄRGVARIABLER - Region Stockholms färgpalett
    ═══════════════════════════════════════════════════════════════════════════ */
 
 :root {
   /* Primära färger - Identitetsbärande */
-  --inera-primary-dark: #7E2A4C;
-  --inera-primary: #A33662;
-  --inera-primary-light: #C03F73;
+  --rs-primary-dark: #001a36;
+  --rs-primary: #002D5A;
+  --rs-primary-light: #1F5C99;
   
   /* Sekundära färger - Bakgrunder */
-  --inera-secondary-dark: #E7DAC5;
-  --inera-secondary: #F3EDE2;
-  --inera-secondary-light: #F9F6F1;
+  --rs-secondary-dark: #C9D8E8;
+  --rs-secondary: #E7F0F7;
+  --rs-secondary-light: #F4F8FB;
   
   /* Komplementfärger - Gröna toner */
-  --inera-green-dark: #305A47;
-  --inera-green: #40775E;
-  --inera-green-light: #AFD4C4;
+  --rs-green-dark: #002D5A;
+  --rs-green: #1F5C99;
+  --rs-green-light: #A9C6E3;
   
   /* Gråskala */
-  --inera-gray-dark: #353636;
-  --inera-gray: #727373;
-  --inera-gray-light: #CCCCCC;
-  --inera-gray-lightest: #F0F0F0;
+  --rs-gray-dark: #353636;
+  --rs-gray: #727373;
+  --rs-gray-light: #CCCCCC;
+  --rs-gray-lightest: #F0F0F0;
   
   /* Accentfärger - Diagram och visualiseringar */
-  --inera-cyan-dark: #098394;
-  --inera-cyan: #0CB0C6;
-  --inera-cyan-light: #4AE0F4;
-  --inera-orange-dark: #D17200;
-  --inera-orange: #FF9517;
-  --inera-orange-light: #FFC075;
+  --rs-cyan-dark: #098394;
+  --rs-cyan: #0CB0C6;
+  --rs-cyan-light: #4AE0F4;
+  --rs-orange-dark: #D17200;
+  --rs-orange: #FF9517;
+  --rs-orange-light: #FFC075;
   
   /* Funktionella färger */
-  --inera-text: #353636;
-  --inera-text-muted: #727373;
-  --inera-link: var(--inera-primary);
-  --inera-link-hover: var(--inera-primary-dark);
-  --inera-border: var(--inera-gray-light);
-  --inera-bg: #FFFFFF;
-  --inera-bg-alt: var(--inera-secondary-light);
+  --rs-text: #353636;
+  --rs-text-muted: #727373;
+  --rs-link: var(--rs-primary);
+  --rs-link-hover: var(--rs-primary-dark);
+  --rs-border: var(--rs-gray-light);
+  --rs-bg: #FFFFFF;
+  --rs-bg-alt: var(--rs-secondary-light);
 
   /* Override IG Publisher theme vars from project.css */
-  --footer-bg-color: var(--inera-primary);
-  --footer-container-bg-color: var(--inera-primary);
+  --footer-bg-color: var(--rs-primary);
+  --footer-container-bg-color: var(--rs-primary);
   --footer-text-color: #ffffff;
   --footer-hyperlink-text-color: #ffffff;
   --footer-highlight-text-color: #ffffff;
-  --toc-box-bg-color: var(--inera-secondary);
-  --toc-box-border: 1px solid var(--inera-secondary-dark);
+  --toc-box-bg-color: var(--rs-secondary);
+  --toc-box-border: 1px solid var(--rs-secondary-dark);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -67,8 +66,8 @@ body {
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
-  color: var(--inera-text);
-  background-color: var(--inera-bg);
+  color: var(--rs-text);
+  background-color: var(--rs-bg);
 }
 
 /* Rubriker - Poppins för visuell hierarki */
@@ -77,7 +76,7 @@ h1, h2, h3, h4, h5, h6,
 .card-title {
   font-family: 'Poppins', 'Open Sans', sans-serif;
   font-weight: 600;
-  color: var(--inera-primary);
+  color: var(--rs-primary);
 }
 
 h1 { 
@@ -90,18 +89,18 @@ h2 {
   font-size: 2rem; 
   margin-top: 2rem;
   margin-bottom: 1rem;
-  border-bottom: 2px solid var(--inera-primary-light);
+  border-bottom: 2px solid var(--rs-primary-light);
   padding-bottom: 0.5rem;
 }
 
 h3 { 
   font-size: 1.5rem;
-  color: var(--inera-green-dark);
+  color: var(--rs-green-dark);
 }
 
 h4 { 
   font-size: 1.25rem;
-  color: var(--inera-gray-dark);
+  color: var(--rs-gray-dark);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -115,7 +114,7 @@ h4 {
 }
 
 .navbar-brand {
-  color: var(--inera-primary) !important;
+  color: var(--rs-primary) !important;
   font-weight: 700;
   font-size: 1.5rem;
 }
@@ -126,23 +125,24 @@ h4 {
 }
 
 #segment-header {
-  border-bottom: 2px solid var(--inera-secondary-dark);
+  border-bottom: 2px solid var(--rs-secondary-dark);
 }
 
-#inera-nav {
+#rs-nav {
   display: flex;
   align-items: center;
   min-height: 64px;
-  padding: 0.25rem 0;
+  padding: 0.5rem 1rem;
+  background-color: var(--rs-primary);
 }
 
-#inera-logo img {
+#rs-logo img {
   height: 52px;
   width: auto;
 }
 
 #segment-navbar .navbar.navbar-inverse {
-  background-color: var(--inera-primary) !important;
+  background-color: var(--rs-primary) !important;
   border: 0 !important;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(126, 42, 76, 0.24);
@@ -168,15 +168,15 @@ h4 {
 #segment-navbar .navbar-inverse .navbar-nav > li > a:hover,
 #segment-navbar .navbar-inverse .navbar-nav > li > a:focus {
   color: #ffffff !important;
-  background-color: var(--inera-primary-dark) !important;
+  background-color: var(--rs-primary-dark) !important;
   text-decoration: none;
 }
 
 #segment-navbar .navbar-inverse .navbar-nav > .active > a,
 #segment-navbar .navbar-inverse .navbar-nav > .active > a:hover,
 #segment-navbar .navbar-inverse .navbar-nav > .active > a:focus {
-  color: var(--inera-primary-dark) !important;
-  background-color: var(--inera-secondary) !important;
+  color: var(--rs-primary-dark) !important;
+  background-color: var(--rs-secondary) !important;
   font-weight: 700;
 }
 
@@ -193,22 +193,22 @@ h4 {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 a {
-  color: var(--inera-link);
+  color: var(--rs-link);
   text-decoration: underline; /* WCAG 1.4.1: urskiljbar utan enbart färg */
   transition: color 0.3s ease;
 }
 
 a:hover,
 a:focus {
-  color: var(--inera-link-hover);
+  color: var(--rs-link-hover);
   text-decoration: underline;
 }
 
 /* Externa länkar - indikator */
-a[href^="http"]:not([href*="inera.se"])::after {
+a[href^="http"]:not([href*="sll.se"]):not([href*="regionstockholm"])::after {
   content: " ↗";
   font-size: 0.8em;
-  color: var(--inera-cyan-dark); /* WCAG 1.4.3: #098394 ger 4.6:1 mot vitt */
+  color: var(--rs-cyan-dark); /* WCAG 1.4.3: #098394 ger 4.6:1 mot vitt */
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -226,22 +226,22 @@ a[href^="http"]:not([href*="inera.se"])::after {
 /* Callout boxes - svensk kontext */
 .swedish-context,
 .alert-info {
-  background-color: var(--inera-secondary);
-  border-left: 4px solid var(--inera-green);
+  background-color: var(--rs-secondary);
+  border-left: 4px solid var(--rs-green);
   padding: 1.5rem;
   margin: 1.5rem 0;
   border-radius: 4px;
 }
 
 .alert-warning {
-  background-color: var(--inera-secondary-light);
-  border-left: 4px solid var(--inera-secondary-dark);
-  color: var(--inera-gray-dark);
+  background-color: var(--rs-secondary-light);
+  border-left: 4px solid var(--rs-secondary-dark);
+  color: var(--rs-gray-dark);
 }
 
 .alert-danger {
   background-color: #FFE6EE;
-  border-left: 4px solid var(--inera-primary);
+  border-left: 4px solid var(--rs-primary);
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -252,12 +252,12 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 1.5rem 0;
-  background-color: var(--inera-bg);
+  background-color: var(--rs-bg);
   font-size: 0.95rem;
 }
 
 thead {
-  background-color: var(--inera-primary);
+  background-color: var(--rs-primary);
   color: white;
 }
 
@@ -265,19 +265,19 @@ thead th {
   padding: 1rem;
   text-align: left;
   font-weight: 600;
-  border-bottom: 2px solid var(--inera-primary-dark);
+  border-bottom: 2px solid var(--rs-primary-dark);
 }
 
 tbody tr {
-  border-bottom: 1px solid var(--inera-border);
+  border-bottom: 1px solid var(--rs-border);
 }
 
 tbody tr:nth-child(even) {
-  background-color: var(--inera-secondary-light);
+  background-color: var(--rs-secondary-light);
 }
 
 tbody tr:hover {
-  background-color: var(--inera-secondary);
+  background-color: var(--rs-secondary);
 }
 
 tbody td {
@@ -287,7 +287,7 @@ tbody td {
 /* Must Support indikator */
 .must-support::after {
   content: " Σ";
-  color: var(--inera-primary);
+  color: var(--rs-primary);
   font-weight: bold;
 }
 
@@ -296,22 +296,22 @@ tbody td {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 pre {
-  background-color: var(--inera-gray-dark);
+  background-color: var(--rs-gray-dark);
   color: #f8f8f2;
   padding: 1.5rem;
   border-radius: 6px;
   overflow-x: auto;
   margin: 1.5rem 0;
-  border-left: 4px solid var(--inera-cyan);
+  border-left: 4px solid var(--rs-cyan);
 }
 
 code {
   font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
   font-size: 0.9em;
-  background-color: var(--inera-gray-lightest);
+  background-color: var(--rs-gray-lightest);
   padding: 0.2em 0.4em;
   border-radius: 3px;
-  color: var(--inera-primary-dark);
+  color: var(--rs-primary-dark);
 }
 
 pre code {
@@ -325,7 +325,7 @@ pre code {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 .card {
-  border: 1px solid var(--inera-border);
+  border: 1px solid var(--rs-border);
   border-radius: 8px;
   margin-bottom: 1.5rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -337,11 +337,11 @@ pre code {
 }
 
 .card-header {
-  background-color: var(--inera-secondary);
-  border-bottom: 2px solid var(--inera-primary-light);
+  background-color: var(--rs-secondary);
+  border-bottom: 2px solid var(--rs-primary-light);
   padding: 1rem 1.5rem;
   font-weight: 600;
-  color: var(--inera-primary-dark);
+  color: var(--rs-primary-dark);
 }
 
 .card-body {
@@ -360,22 +360,22 @@ pre code {
 }
 
 .badge-draft {
-  background-color: var(--inera-orange-light);
-  color: var(--inera-gray-dark);
+  background-color: var(--rs-orange-light);
+  color: var(--rs-gray-dark);
 }
 
 .badge-active {
-  background-color: var(--inera-green-light);
-  color: var(--inera-green-dark);
+  background-color: var(--rs-green-light);
+  color: var(--rs-green-dark);
 }
 
 .badge-trial-use {
-  background-color: var(--inera-cyan-light);
-  color: var(--inera-cyan-dark);
+  background-color: var(--rs-cyan-light);
+  color: var(--rs-cyan-dark);
 }
 
 .badge-normative {
-  background-color: var(--inera-primary);
+  background-color: var(--rs-primary);
   color: white;
 }
 
@@ -384,15 +384,15 @@ pre code {
    ═══════════════════════════════════════════════════════════════════════════ */
 
 footer {
-  background-color: var(--inera-gray-dark);
-  color: var(--inera-gray-lightest);
+  background-color: var(--rs-gray-dark);
+  color: var(--rs-gray-lightest);
   padding: 3rem 0 1.5rem;
   margin-top: 4rem;
-  border-top: 4px solid var(--inera-primary);
+  border-top: 4px solid var(--rs-primary);
 }
 
 footer a {
-  color: var(--inera-cyan-light);
+  color: var(--rs-cyan-light);
 }
 
 footer a:hover {
@@ -415,15 +415,15 @@ footer a:hover {
   text-align: center;
   padding-top: 2rem;
   margin-top: 2rem;
-  border-top: 1px solid var(--inera-gray);
+  border-top: 1px solid var(--rs-gray);
   font-size: 0.85rem;
-  color: var(--inera-gray-light);
+  color: var(--rs-gray-light);
 }
 
 /* IG Publisher footer + build-status override (beige ton) */
 #segment-footer {
-  background-color: var(--inera-primary) !important;
-  border-top: 2px solid var(--inera-primary-dark) !important;
+  background-color: var(--rs-primary) !important;
+  border-top: 2px solid var(--rs-primary-dark) !important;
   color: #ffffff !important;
   --footer-hyperlink-text-color: #ffffff;
   --footer-highlight-text-color: #ffffff;
@@ -432,7 +432,7 @@ footer a:hover {
 #segment-footer > .container,
 #segment-footer > .container .inner-wrapper,
 #segment-footer > .container .inner-wrapper > p {
-  background-color: var(--inera-primary) !important;
+  background-color: var(--rs-primary) !important;
   color: #ffffff !important;
 }
 
@@ -442,7 +442,7 @@ footer a:hover {
 
 #segment-footer a:hover,
 #segment-footer a:focus {
-  color: var(--inera-secondary-light) !important;
+  color: var(--rs-secondary-light) !important;
 }
 
 #publish-box,
@@ -452,9 +452,9 @@ footer a:hover {
 .mustsupport,
 [class*="must-support"],
 [class*="mustSupport"] {
-  background-color: var(--inera-secondary) !important;
-  border-color: var(--inera-secondary-dark) !important;
-  color: var(--inera-gray-dark) !important;
+  background-color: var(--rs-secondary) !important;
+  border-color: var(--rs-secondary-dark) !important;
+  color: var(--rs-gray-dark) !important;
 }
 
 /* TOC/"Innehåll" box (markdown-toc) */
@@ -462,29 +462,29 @@ div.markdown-toc,
 ul.markdown-toc,
 #markdown-toc {
   background-color: var(--breadcrumb-bg-color) !important;
-  border: 1px solid var(--inera-secondary-dark) !important;
+  border: 1px solid var(--rs-secondary-dark) !important;
   border-radius: 12px;
-  color: var(--inera-gray-dark) !important;
+  color: var(--rs-gray-dark) !important;
   padding: 0 !important;
   margin: 1.25rem 0 1.5rem !important;
   overflow: hidden;
 }
 
 div.markdown-toc {
-  box-shadow: 0 2px 6px rgba(53, 54, 54, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 45, 90, 0.08);
 }
 
 div.markdown-toc::before {
   content: "Hitta på sidan";
   display: block;
   background-color: var(--breadcrumb-bg-color);
-  color: var(--inera-primary);
+  color: var(--rs-primary);
   font-family: 'Poppins', 'Open Sans', sans-serif;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.01em;
   padding: 0.8rem 1rem;
-  border-bottom: 1px solid var(--inera-secondary-dark);
+  border-bottom: 1px solid var(--rs-secondary-dark);
 }
 
 div.markdown-toc > ul,
@@ -508,13 +508,13 @@ ul.markdown-toc li > ul,
 #markdown-toc li > ul {
   margin: 0.15rem 0 0.25rem 0.8rem;
   padding-left: 0.45rem;
-  border-left: 2px solid var(--inera-secondary-dark);
+  border-left: 2px solid var(--rs-secondary-dark);
 }
 
 div.markdown-toc a,
 ul.markdown-toc a,
 #markdown-toc a {
-  color: var(--inera-primary-dark) !important;
+  color: var(--rs-primary-dark) !important;
   display: inline-block;
   font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   font-size: 0.98rem;
@@ -531,13 +531,13 @@ ul.markdown-toc a:hover,
 ul.markdown-toc a:focus,
 #markdown-toc a:hover,
 #markdown-toc a:focus {
-  background-color: var(--inera-secondary-light);
-  color: var(--inera-primary) !important;
+  background-color: var(--rs-secondary-light);
+  color: var(--rs-primary) !important;
   text-decoration: none;
 }
 
 #publish-box a {
-  color: var(--inera-primary-dark) !important;
+  color: var(--rs-primary-dark) !important;
 }
 
 /* ═══════════════════════════════════════════════════════════════════════════
@@ -549,7 +549,7 @@ ul.markdown-toc a:focus,
   position: absolute;
   top: -40px;
   left: 0;
-  background: var(--inera-primary);
+  background: var(--rs-primary);
   color: white;
   padding: 8px;
   text-decoration: none;
@@ -562,7 +562,7 @@ ul.markdown-toc a:focus,
 
 /* Fokus-indikatorer — WCAG 2.2 §2.4.11: ≥ 3:1 mot intilliggande färg */
 *:focus {
-  outline: 3px solid var(--inera-primary-dark); /* #7E2A4C, 8.1:1 mot vitt */
+  outline: 3px solid var(--rs-primary-dark); /* #001a36, 8.1:1 mot vitt */
   outline-offset: 2px;
 }
 
@@ -610,23 +610,23 @@ ul.markdown-toc a:focus,
 /* HSA-id highlighting */
 .hsa-id,
 code[class*="hsaid"] {
-  background-color: var(--inera-green-light);
-  color: var(--inera-green-dark);
+  background-color: var(--rs-green-light);
+  color: var(--rs-green-dark);
   font-weight: 600;
 }
 
 /* Personnummer - skyddad information */
 .personnummer,
 .protected-info {
-  background-color: var(--inera-secondary);
-  border: 1px dashed var(--inera-primary);
+  background-color: var(--rs-secondary);
+  border: 1px dashed var(--rs-primary);
   padding: 0.2em 0.4em;
   border-radius: 3px;
 }
 
 /* TKB context marker */
 .tkb-reference {
-  background-color: var(--inera-orange-light);
+  background-color: var(--rs-orange-light);
   padding: 0.1em 0.3em;
   border-radius: 3px;
   font-size: 0.9em;
@@ -636,7 +636,7 @@ code[class*="hsaid"] {
 /* Mandatory field indicator */
 .mandatory::before {
   content: "* ";
-  color: var(--inera-primary);
+  color: var(--rs-primary);
   font-weight: bold;
 }
 
@@ -672,21 +672,21 @@ code[class*="hsaid"] {
   #segment-content h4,
   #segment-content h5,
   #segment-content h6 {
-    color: var(--inera-primary-dark) !important;
+    color: var(--rs-primary-dark) !important;
   }
 
   #segment-content h2 {
-    border-bottom-color: var(--inera-primary) !important;
+    border-bottom-color: var(--rs-primary) !important;
   }
 
   #segment-content h3 {
-    color: var(--inera-primary) !important;
+    color: var(--rs-primary) !important;
   }
 
   #segment-content h4,
   #segment-content h5,
   #segment-content h6 {
-    color: var(--inera-gray-dark) !important;
+    color: var(--rs-gray-dark) !important;
   }
   pre,
   .card {
