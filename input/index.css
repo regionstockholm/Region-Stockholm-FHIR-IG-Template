@@ -1,0 +1,129 @@
+ body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(231, 243, 249, 226);
+}
+
+/* Header: Container för hela headern. Ändra height här om ni vill reducera höjden på headern */
+.headerBorder {
+  background-color: #002d5a;
+  width: 100%;
+  height: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  position: relative;
+}
+
+/* Header: Container för innehåll i headern.   */
+.headerContent {
+  width: 83%;
+  display:flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.heading {
+  width: 80vw;
+  font-size: 2rem; /* Storlek på titeln, kan anges i px om ni vill det också */
+  color: #002d5a;
+  font-weight: 900;
+  line-height: 1.11;
+}
+/* Logga: Container för logga  */
+.imgWrapper {
+  height: 100px; /* Set the desired height */
+  width: 275px;
+  position: absolute;
+  bottom: 10%;
+}
+
+/* Bildens storlek sätts till 100% för att max ta upp 100 % av containern här ovan (.imgWrapper)*/
+.image {
+  width:100%;
+  height: 100%;
+}
+
+main{
+  min-height: 100vh;
+}
+
+.white-frame {
+  width: 80vw;
+  height: auto;
+  background-color: #ffffff;
+  padding: 10px 25px 25px 25px;
+  border-bottom-right-radius: 25px;
+  display: inline-block;
+  color: #002d5a;
+}
+
+.link {
+  color: #002d5a;
+}
+
+/* Navigering: ul & li är listan som navigeringen innehåller */
+ul {
+  gap: 1rem;
+  display: flex;
+  position: absolute;
+  bottom:-10px;
+  padding: 0 0 0 ;
+}
+li {
+  font-weight: bold;
+  bottom: -2px;
+  list-style: none;
+}
+
+.navLink {
+  color: white;
+  list-style: none;
+  text-decoration: none;
+}
+/* Navigering: A är taggen som innehåller länken */
+ .navLink:hover {
+  border-bottom: 2px solid white;
+}
+
+
+.navLink.current {
+  border-bottom: 2px solid white;
+}
+
+
+/* Innehållscontainer: Allt innehåll mellan header och footer */
+.mainWrapper {
+padding-top: 3rem;
+display: flex;
+flex-direction: column;
+align-items:center;
+gap: 1rem;
+}
+
+
+/*  Innehållssektioner: (för text etc)  */
+.section {
+  width: 80vw;
+}
+
+.footer {
+  bottom: 0;
+  background-color: #002d5a;
+  width: 100%;
+  height: 175px;
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  justify-content: flex-start;
+}
+
+.footerContent {
+  padding-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 70vw;
+  color: white;
+}
