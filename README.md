@@ -25,12 +25,12 @@ The template uses region Stockholm's visual identity by default. All branding is
 
 | File | What it does |
 |------|-------------|
-| `input/includes/fragment-css.html` | Loads Inera CSS and favicon |
-| `input/includes/fragment-header.html` | Inera logo in the header |
-| `input/images/inera.css` | All Inera colours, fonts and layout |
-| `input/images/inera-*.svg / inera-*.png` | Logos and favicon |
+| `input/includes/fragment-css.html` | Loads Region Stockholm CSS and favicon |
+| `input/includes/fragment-header.html` | Region Stockholm logo in the header |
+| `input/images/region-stockholm.css` | Region Stockholm colours, fonts and layout |
+| `input/images/Region_Stockholm_*.svg`, `sll-logo.svg`, `favicon.svg` | Logos and favicon (placeholder, replace with the official one) |
 
-Remove these four files (and the `input/images/inera-*` assets) to revert to standard HL7 FHIR styling.
+Remove these files to revert to standard HL7 FHIR styling.
 
 ---
 
