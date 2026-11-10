@@ -1,6 +1,6 @@
 # Inera FHIR Implementation Guide Template
 
-[![Build and publish IG](https://github.com/Inera-AB/IneraFHIRTemplate/actions/workflows/publish.yml/badge.svg)](https://github.com/Inera-AB/IneraFHIRTemplate/actions/workflows/publish.yml)
+[![Build and publish IG](https://github.com/regionstockholm/Region-Stockholm-FHIR-IG-Template/actions/workflows/publish.yml/badge.svg)](https://github.com/regionstockholm/Region-Stockholm-FHIR-IG-Template/actions/workflows/publish.yml)
 [![Validate FSH](https://github.com/Inera-AB/IneraFHIRTemplate/actions/workflows/validate.yml/badge.svg)](https://github.com/Inera-AB/IneraFHIRTemplate/actions/workflows/validate.yml)
 [![FHIR R4](https://img.shields.io/badge/FHIR-R4-blue)](https://hl7.org/fhir/R4/)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
