@@ -5,7 +5,7 @@
 [![FHIR R4](https://img.shields.io/badge/FHIR-R4-blue)](https://hl7.org/fhir/R4/)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-This repository is a GitHub template for Inera FHIR Implementation Guides. It includes the standard IG structure, author guidance pages, an example FSH profile, and pre-configured GitHub Actions for validation and publishing.
+This repository is a GitHub template for Region Stockholm Implementation Guides. It includes the standard IG structure, author guidance pages, an example FSH profile, and pre-configured GitHub Actions for validation and publishing.
 
 ---
 
@@ -21,7 +21,7 @@ Three deliberate choices shape how this template's narrative pages are organised
 
 ## Inera branding
 
-The template uses Inera's visual identity by default. All branding is isolated to four files:
+The template uses region Stockholm's visual identity by default. All branding is isolated to four files:
 
 | File | What it does |
 |------|-------------|
