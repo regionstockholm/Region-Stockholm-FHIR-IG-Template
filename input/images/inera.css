@@ -1,0 +1,695 @@
+/*
+ * Inera FHIR IG Template - Custom Styles
+ * Baserat på Ineras grafiska profil 2023-07-21
+ * https://www.inera.se/redaktor/ineras-varumarkesmanual/grafisk-profil/
+ */
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FÄRGVARIABLER - Ineras färgpalett
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+:root {
+  /* Primära färger - Identitetsbärande */
+  --inera-primary-dark: #7E2A4C;
+  --inera-primary: #A33662;
+  --inera-primary-light: #C03F73;
+  
+  /* Sekundära färger - Bakgrunder */
+  --inera-secondary-dark: #E7DAC5;
+  --inera-secondary: #F3EDE2;
+  --inera-secondary-light: #F9F6F1;
+  
+  /* Komplementfärger - Gröna toner */
+  --inera-green-dark: #305A47;
+  --inera-green: #40775E;
+  --inera-green-light: #AFD4C4;
+  
+  /* Gråskala */
+  --inera-gray-dark: #353636;
+  --inera-gray: #727373;
+  --inera-gray-light: #CCCCCC;
+  --inera-gray-lightest: #F0F0F0;
+  
+  /* Accentfärger - Diagram och visualiseringar */
+  --inera-cyan-dark: #098394;
+  --inera-cyan: #0CB0C6;
+  --inera-cyan-light: #4AE0F4;
+  --inera-orange-dark: #D17200;
+  --inera-orange: #FF9517;
+  --inera-orange-light: #FFC075;
+  
+  /* Funktionella färger */
+  --inera-text: #353636;
+  --inera-text-muted: #727373;
+  --inera-link: var(--inera-primary);
+  --inera-link-hover: var(--inera-primary-dark);
+  --inera-border: var(--inera-gray-light);
+  --inera-bg: #FFFFFF;
+  --inera-bg-alt: var(--inera-secondary-light);
+
+  /* Override IG Publisher theme vars from project.css */
+  --footer-bg-color: var(--inera-primary);
+  --footer-container-bg-color: var(--inera-primary);
+  --footer-text-color: #ffffff;
+  --footer-hyperlink-text-color: #ffffff;
+  --footer-highlight-text-color: #ffffff;
+  --toc-box-bg-color: var(--inera-secondary);
+  --toc-box-border: 1px solid var(--inera-secondary-dark);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TYPOGRAFI - Open Sans (Google Font)
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:wght@400;500;600;700&display=swap');
+
+body {
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--inera-text);
+  background-color: var(--inera-bg);
+}
+
+/* Rubriker - Poppins för visuell hierarki */
+h1, h2, h3, h4, h5, h6,
+.navbar-brand,
+.card-title {
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-weight: 600;
+  color: var(--inera-primary);
+}
+
+h1 { 
+  font-size: 2.5rem; 
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+}
+
+h2 { 
+  font-size: 2rem; 
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  border-bottom: 2px solid var(--inera-primary-light);
+  padding-bottom: 0.5rem;
+}
+
+h3 { 
+  font-size: 1.5rem;
+  color: var(--inera-green-dark);
+}
+
+h4 { 
+  font-size: 1.25rem;
+  color: var(--inera-gray-dark);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   HEADER OCH NAVIGATION
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.navbar {
+  background-color: transparent !important;
+  border-bottom: 0;
+  box-shadow: none;
+}
+
+.navbar-brand {
+  color: var(--inera-primary) !important;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+  margin-right: 1rem;
+}
+
+#segment-header {
+  border-bottom: 2px solid var(--inera-secondary-dark);
+}
+
+#inera-nav {
+  display: flex;
+  align-items: center;
+  min-height: 64px;
+  padding: 0.25rem 0;
+}
+
+#inera-logo img {
+  height: 52px;
+  width: auto;
+}
+
+#segment-navbar .navbar.navbar-inverse {
+  background-color: var(--inera-primary) !important;
+  border: 0 !important;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(126, 42, 76, 0.24);
+  margin: 0.75rem 0 0.5rem;
+}
+
+#segment-navbar .navbar.navbar-inverse .container {
+  width: 100%;
+}
+
+#segment-navbar .navbar-inverse .navbar-nav > li > a {
+  color: #ffffff !important;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.18rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  line-height: 1.2;
+  padding: 16px 18px;
+  border-radius: 8px;
+  transition: background-color 0.18s ease, color 0.18s ease;
+}
+
+#segment-navbar .navbar-inverse .navbar-nav > li > a:hover,
+#segment-navbar .navbar-inverse .navbar-nav > li > a:focus {
+  color: #ffffff !important;
+  background-color: var(--inera-primary-dark) !important;
+  text-decoration: none;
+}
+
+#segment-navbar .navbar-inverse .navbar-nav > .active > a,
+#segment-navbar .navbar-inverse .navbar-nav > .active > a:hover,
+#segment-navbar .navbar-inverse .navbar-nav > .active > a:focus {
+  color: var(--inera-primary-dark) !important;
+  background-color: var(--inera-secondary) !important;
+  font-weight: 700;
+}
+
+#segment-navbar .navbar-inverse .navbar-toggle {
+  border-color: rgba(255, 255, 255, 0.7);
+}
+
+#segment-navbar .navbar-inverse .navbar-toggle .icon-bar {
+  background-color: #ffffff;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   LÄNKAR
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+a {
+  color: var(--inera-link);
+  text-decoration: underline; /* WCAG 1.4.1: urskiljbar utan enbart färg */
+  transition: color 0.3s ease;
+}
+
+a:hover,
+a:focus {
+  color: var(--inera-link-hover);
+  text-decoration: underline;
+}
+
+/* Externa länkar - indikator */
+a[href^="http"]:not([href*="inera.se"])::after {
+  content: " ↗";
+  font-size: 0.8em;
+  color: var(--inera-cyan-dark); /* WCAG 1.4.3: #098394 ger 4.6:1 mot vitt */
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CONTENT OMRÅDEN
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.container {
+  max-width: 1200px;
+}
+
+.content {
+  padding: 2rem 0;
+}
+
+/* Callout boxes - svensk kontext */
+.swedish-context,
+.alert-info {
+  background-color: var(--inera-secondary);
+  border-left: 4px solid var(--inera-green);
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  border-radius: 4px;
+}
+
+.alert-warning {
+  background-color: var(--inera-secondary-light);
+  border-left: 4px solid var(--inera-secondary-dark);
+  color: var(--inera-gray-dark);
+}
+
+.alert-danger {
+  background-color: #FFE6EE;
+  border-left: 4px solid var(--inera-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TABELLER - FHIR artifacts
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  background-color: var(--inera-bg);
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: var(--inera-primary);
+  color: white;
+}
+
+thead th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--inera-primary-dark);
+}
+
+tbody tr {
+  border-bottom: 1px solid var(--inera-border);
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--inera-secondary-light);
+}
+
+tbody tr:hover {
+  background-color: var(--inera-secondary);
+}
+
+tbody td {
+  padding: 0.75rem 1rem;
+}
+
+/* Must Support indikator */
+.must-support::after {
+  content: " Σ";
+  color: var(--inera-primary);
+  font-weight: bold;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   KODBLOCK - Syntax highlighting
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+pre {
+  background-color: var(--inera-gray-dark);
+  color: #f8f8f2;
+  padding: 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+  border-left: 4px solid var(--inera-cyan);
+}
+
+code {
+  font-family: 'Monaco', 'Menlo', 'Courier New', monospace;
+  font-size: 0.9em;
+  background-color: var(--inera-gray-lightest);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  color: var(--inera-primary-dark);
+}
+
+pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   CARDS - Profile/Extension boxes
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.card {
+  border: 1px solid var(--inera-border);
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(163, 54, 98, 0.15);
+}
+
+.card-header {
+  background-color: var(--inera-secondary);
+  border-bottom: 2px solid var(--inera-primary-light);
+  padding: 1rem 1.5rem;
+  font-weight: 600;
+  color: var(--inera-primary-dark);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   BADGES - Status, maturity, standards
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+.badge {
+  padding: 0.3em 0.6em;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 0.85em;
+}
+
+.badge-draft {
+  background-color: var(--inera-orange-light);
+  color: var(--inera-gray-dark);
+}
+
+.badge-active {
+  background-color: var(--inera-green-light);
+  color: var(--inera-green-dark);
+}
+
+.badge-trial-use {
+  background-color: var(--inera-cyan-light);
+  color: var(--inera-cyan-dark);
+}
+
+.badge-normative {
+  background-color: var(--inera-primary);
+  color: white;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   FOOTER
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+footer {
+  background-color: var(--inera-gray-dark);
+  color: var(--inera-gray-lightest);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+  border-top: 4px solid var(--inera-primary);
+}
+
+footer a {
+  color: var(--inera-cyan-light);
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.footer-logo {
+  height: 60px;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
+}
+
+.footer-contact {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.footer-copyright {
+  text-align: center;
+  padding-top: 2rem;
+  margin-top: 2rem;
+  border-top: 1px solid var(--inera-gray);
+  font-size: 0.85rem;
+  color: var(--inera-gray-light);
+}
+
+/* IG Publisher footer + build-status override (beige ton) */
+#segment-footer {
+  background-color: var(--inera-primary) !important;
+  border-top: 2px solid var(--inera-primary-dark) !important;
+  color: #ffffff !important;
+  --footer-hyperlink-text-color: #ffffff;
+  --footer-highlight-text-color: #ffffff;
+}
+
+#segment-footer > .container,
+#segment-footer > .container .inner-wrapper,
+#segment-footer > .container .inner-wrapper > p {
+  background-color: var(--inera-primary) !important;
+  color: #ffffff !important;
+}
+
+#segment-footer a {
+  color: #ffffff !important;
+}
+
+#segment-footer a:hover,
+#segment-footer a:focus {
+  color: var(--inera-secondary-light) !important;
+}
+
+#publish-box,
+.alert-warning,
+.stu-note,
+.must-support,
+.mustsupport,
+[class*="must-support"],
+[class*="mustSupport"] {
+  background-color: var(--inera-secondary) !important;
+  border-color: var(--inera-secondary-dark) !important;
+  color: var(--inera-gray-dark) !important;
+}
+
+/* TOC/"Innehåll" box (markdown-toc) */
+div.markdown-toc,
+ul.markdown-toc,
+#markdown-toc {
+  background-color: var(--breadcrumb-bg-color) !important;
+  border: 1px solid var(--inera-secondary-dark) !important;
+  border-radius: 12px;
+  color: var(--inera-gray-dark) !important;
+  padding: 0 !important;
+  margin: 1.25rem 0 1.5rem !important;
+  overflow: hidden;
+}
+
+div.markdown-toc {
+  box-shadow: 0 2px 6px rgba(53, 54, 54, 0.08);
+}
+
+div.markdown-toc::before {
+  content: "Hitta på sidan";
+  display: block;
+  background-color: var(--breadcrumb-bg-color);
+  color: var(--inera-primary);
+  font-family: 'Poppins', 'Open Sans', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--inera-secondary-dark);
+}
+
+div.markdown-toc > ul,
+ul.markdown-toc,
+#markdown-toc {
+  list-style: none;
+  background-color: var(--breadcrumb-bg-color) !important;
+  margin: 0 !important;
+  padding: 0.65rem 0.9rem 0.8rem !important;
+}
+
+div.markdown-toc li,
+ul.markdown-toc li,
+#markdown-toc li {
+  margin: 0.1rem 0;
+  padding: 0;
+}
+
+div.markdown-toc li > ul,
+ul.markdown-toc li > ul,
+#markdown-toc li > ul {
+  margin: 0.15rem 0 0.25rem 0.8rem;
+  padding-left: 0.45rem;
+  border-left: 2px solid var(--inera-secondary-dark);
+}
+
+div.markdown-toc a,
+ul.markdown-toc a,
+#markdown-toc a {
+  color: var(--inera-primary-dark) !important;
+  display: inline-block;
+  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+  border-radius: 6px;
+  padding: 0.22rem 0.35rem;
+}
+
+div.markdown-toc a:hover,
+div.markdown-toc a:focus,
+ul.markdown-toc a:hover,
+ul.markdown-toc a:focus,
+#markdown-toc a:hover,
+#markdown-toc a:focus {
+  background-color: var(--inera-secondary-light);
+  color: var(--inera-primary) !important;
+  text-decoration: none;
+}
+
+#publish-box a {
+  color: var(--inera-primary-dark) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   TILLGÄNGLIGHET - Accessibility
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* Skippa till huvudinnehåll */
+.skip-to-content {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--inera-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 9999;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Fokus-indikatorer — WCAG 2.2 §2.4.11: ≥ 3:1 mot intilliggande färg */
+*:focus {
+  outline: 3px solid var(--inera-primary-dark); /* #7E2A4C, 8.1:1 mot vitt */
+  outline-offset: 2px;
+}
+
+/* Minskat rörelse för användare med prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   RESPONSIV DESIGN
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media (max-width: 768px) {
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  
+  .navbar-brand img {
+    height: 30px;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  table {
+    font-size: 0.85rem;
+  }
+  
+  tbody td,
+  thead th {
+    padding: 0.5rem;
+  }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   SPECIAL - Swedish healthcare specific
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+/* HSA-id highlighting */
+.hsa-id,
+code[class*="hsaid"] {
+  background-color: var(--inera-green-light);
+  color: var(--inera-green-dark);
+  font-weight: 600;
+}
+
+/* Personnummer - skyddad information */
+.personnummer,
+.protected-info {
+  background-color: var(--inera-secondary);
+  border: 1px dashed var(--inera-primary);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+}
+
+/* TKB context marker */
+.tkb-reference {
+  background-color: var(--inera-orange-light);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+
+/* Mandatory field indicator */
+.mandatory::before {
+  content: "* ";
+  color: var(--inera-primary);
+  font-weight: bold;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   PRINT STYLES
+   ═══════════════════════════════════════════════════════════════════════════ */
+
+@media print {
+  body {
+    font-size: 12pt;
+    color: black;
+  }
+  
+  a {
+    color: black;
+    text-decoration: underline;
+  }
+  
+  .navbar,
+  footer,
+  .no-print {
+    display: none;
+  }
+  
+  h2 {
+    page-break-after: avoid;
+  }
+  
+
+  #segment-content h1,
+  #segment-content h2,
+  #segment-content h3,
+  #segment-content h4,
+  #segment-content h5,
+  #segment-content h6 {
+    color: var(--inera-primary-dark) !important;
+  }
+
+  #segment-content h2 {
+    border-bottom-color: var(--inera-primary) !important;
+  }
+
+  #segment-content h3 {
+    color: var(--inera-primary) !important;
+  }
+
+  #segment-content h4,
+  #segment-content h5,
+  #segment-content h6 {
+    color: var(--inera-gray-dark) !important;
+  }
+  pre,
+  .card {
+    page-break-inside: avoid;
+  }
+}

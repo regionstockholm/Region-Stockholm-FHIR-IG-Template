@@ -1,0 +1,11 @@
+name: Cleanup branch build
+
+on:
+  delete:
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    uses: Inera-AB/fhir-ig-workflows/.github/workflows/cleanup.yml@v1

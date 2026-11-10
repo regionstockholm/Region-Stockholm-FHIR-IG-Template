@@ -1,0 +1,22 @@
+== Suppressed Messages ==
+
+# Display name for Sweden not available in sv-SE on tx server — acceptable
+There are no valid display names found for the code urn:iso:std:iso:3166#SE
+
+# Auto-generated links in the IG narrative point to the canonical URL which is not live yet.
+# These will resolve once the IG is published at https://fhir.inera.se/ig/template
+The link 'StructureDefinition-IneraPatient.html' for "fake generated link for Implementation Guide" cannot be resolved
+The link 'Patient-IneraPatientExample.html' for "fake generated link for Implementation Guide" cannot be resolved
+
+# The download link is absolute against the canonical URL so that it stays
+# valid wherever the IG is served from. The publisher resolves canonical-
+# prefixed links against the local build, where the package sits at the output
+# root rather than under the canonical path, so it cannot verify this one.
+# A milestone release copies the published IG, package.tgz included, to the IG root.
+The link 'https://fhir.inera.se/ig/template/package.tgz' for "Paket (tgz)" cannot be resolved
+
+# Standard xhtml fragments not included — acceptable when using a custom local template
+The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml, dependency-table-nontech.xhtml] is not included anywhere in the produced implementation guide
+The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide

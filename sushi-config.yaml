@@ -1,0 +1,54 @@
+id: inera.core.template
+canonical: https://fhir.inera.se/ig/template
+name: IneraCoreTemplate
+title: "Inera FHIR Implementation Guide Template"
+description: "Mall för Ineras FHIR Implementation Guides."
+status: draft
+version: 2.3.0
+fhirVersion: 4.0.1
+copyrightYear: 2024+
+releaseLabel: ci-build
+license: CC0-1.0
+
+publisher:
+  name: Inera AB
+  url: https://www.inera.se
+
+jurisdiction: urn:iso:std:iso:3166#SE "Sweden"
+
+parameters:
+  show-inherited-invariants: false
+  usage-stats-opt-out: true
+  i18n-default-lang: sv
+
+pages:
+  index.md:
+    title: Hem
+  introduction.md:
+    title: Inledning
+  information-basis.md:
+    title: Informationsunderlag
+  use-cases.md:
+    title: Användningsfall
+  roles-and-responsibilities.md:
+    title: Roller och ansvar
+  mappings.md:
+    title: Mappning till profiler
+  rest-interactions.md:
+    title: REST-interaktioner och sökparametrar
+  expected-responses.md:
+    title: Förväntade svar
+  capabilitystatement.md:
+    title: CapabilityStatement
+  error-handling.md:
+    title: Felhantering
+  security.md:
+    title: Säkerhet och behörighet
+  testing.md:
+    title: Testning och validering
+  about.md:
+    title: Om
+  downloads.md:
+    title: Nedladdningar
+  version-history.md:
+    title: Versionshistorik

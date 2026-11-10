@@ -1,0 +1,13 @@
+# IG Publisher output
+output/
+temp/
+template/
+input-cache/
+*.tgz
+
+# SUSHI output
+fsh-generated/
+
+# OS
+.DS_Store
+Thumbs.db

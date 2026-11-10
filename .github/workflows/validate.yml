@@ -1,0 +1,14 @@
+name: Validate FSH
+
+on:
+  push:
+    branches-ignore:
+      - main
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    uses: Inera-AB/fhir-ig-workflows/.github/workflows/validate.yml@v1

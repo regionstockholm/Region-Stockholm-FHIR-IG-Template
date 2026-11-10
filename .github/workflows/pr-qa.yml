@@ -1,0 +1,13 @@
+name: IG Publisher QA on PR
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  qa:
+    uses: Inera-AB/fhir-ig-workflows/.github/workflows/pr-qa.yml@v1

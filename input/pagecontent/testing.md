@@ -1,0 +1,1 @@
+*Beskriv hur implementatörer kan testa och validera sina implementationer mot denna IG, t.ex. med hjälp av HL7 FHIR Validator och det publicerade IG-paketet (se [Nedladdningar](downloads.html)). Ange eventuell testmiljö eller testdatakälla.*
