@@ -18,7 +18,7 @@
   fhir:ImplementationGuide.name [ fhir:value "RegionStockholmCoreTemplate"] ;
   fhir:ImplementationGuide.title [ fhir:value "Region Stockholm FHIR Implementation Guide Template"] ;
   fhir:ImplementationGuide.status [ fhir:value "draft"] ;
-  fhir:ImplementationGuide.date [ fhir:value "2026-11-11T12:26:21+00:00"^^xsd:dateTime] ;
+  fhir:ImplementationGuide.date [ fhir:value "2026-11-11T12:42:01+00:00"^^xsd:dateTime] ;
   fhir:ImplementationGuide.publisher [ fhir:value "Region Stockholm"] ;
   fhir:ImplementationGuide.contact [
      fhir:index -1 ;

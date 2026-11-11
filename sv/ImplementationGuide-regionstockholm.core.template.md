@@ -14,7 +14,7 @@
   "name" : "RegionStockholmCoreTemplate",
   "title" : "Region Stockholm FHIR Implementation Guide Template",
   "status" : "draft",
-  "date" : "2026-11-11T12:26:21+00:00",
+  "date" : "2026-11-11T12:42:01+00:00",
   "publisher" : "Region Stockholm",
   "contact" : [{
     "name" : "Region Stockholm",
