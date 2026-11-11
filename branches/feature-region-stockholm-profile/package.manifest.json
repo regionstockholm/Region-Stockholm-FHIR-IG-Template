@@ -1,7 +1,0 @@
-{
-  "version" : "2.3.0",
-  "fhirVersion" : ["4.0.1"],
-  "date" : "20261110142338",
-  "name" : "inera.core.template",
-  "jurisdiction" : "urn:iso:std:iso:3166#SE"
-}
