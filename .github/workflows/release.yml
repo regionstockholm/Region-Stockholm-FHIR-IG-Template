@@ -1,26 +1,41 @@
-name: Publish release
+name: Build release artifact
 
-# Publishes a release with IG Publisher's publication mode. A release tag
-# (no "v" prefix: 1.2.0, 1.2.0-rc1) publishes to fhir.inera.se; a manual run
-# on a branch publishes to the test web root. The workflow itself lives in
-# Inera-AB/fhir-ig-workflows.
-
+# Transitional workflow: build a tagged version but do not publish it.
 on:
   push:
     tags:
       - '[0-9]+.[0-9]+.[0-9]+'
       - '[0-9]+.[0-9]+.[0-9]+-*'
-  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  release:
-    uses: Inera-AB/fhir-ig-workflows/.github/workflows/release.yml@v1
-    # The template is published on fhir.inera.se as an example but kept out
-    # of the FHIR package registry. An IG made from the template removes
-    # these two lines so that its packages reach packages.fhir.org.
-    with:
-      package-feed: false
-    secrets: inherit
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Check release tag
+        run: |
+          VERSION=$(ruby -ryaml -e 'v = YAML.safe_load_file("sushi-config.yaml")["version"]; abort "Missing version in sushi-config.yaml" unless v.is_a?(String) && !v.empty?; puts v')
+          if [[ ! "$GITHUB_REF_NAME" =~ ^[0-9]+\.[0-9]+\.[0-9]+(-[0-9A-Za-z.-]+)?$ || "$GITHUB_REF_NAME" != "$VERSION" ]]; then
+            echo "::error::Release tag ${GITHUB_REF_NAME} must match version ${VERSION} in sushi-config.yaml and have the form X.Y.Z or X.Y.Z-suffix."
+            exit 1
+          fi
+
+      - uses: Inera-AB/fhir-ig-workflows/actions/setup-ig-tools@v1
+
+      - name: Build IG
+        run: |
+          sushi .
+          java -jar input-cache/publisher.jar -ig ig.ini -tx https://tx.fhir.org/r4
+          test -f output/qa.json
+
+      - name: Upload IG build
+        uses: actions/upload-artifact@v4
+        with:
+          name: ig-build-${{ github.ref_name }}
+          path: output/
+          if-no-files-found: error
+          retention-days: 30

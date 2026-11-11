@@ -2,13 +2,12 @@
   "mode" : "milestone",
   "status" : "release",
   "sequence" : "Releases",
-  "desc" : "Övergång till IG Publishers officiella publiceringsläge.",
-  "first" : false,
-  "title" : "Inera FHIR Implementation Guide Template",
+  "desc" : "Exempelbeskrivning: uppdateras inför publicering.",
+  "first" : true,
+  "title" : "Region Stockholm FHIR Implementation Guide Template",
   "category" : "National Base",
-  "introduction" : "Mall för Ineras FHIR Implementation Guides.",
-  "ci-build" : "https://inera-ab.github.io/IneraFHIRTemplate",
-  "registry-description" : "Mall för Ineras FHIR Implementation Guides.",
+  "introduction" : "Mall för Region Stockholms FHIR Implementation Guides.",
+  "registry-description" : "Mall för Region Stockholms FHIR Implementation Guides.",
   "registry-country" : "se",
-  "registry-authority" : "Inera"
+  "registry-authority" : "Region Stockholm"
 }

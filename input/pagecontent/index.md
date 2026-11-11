@@ -2,7 +2,7 @@
 
 *Ange ett namn som ringar in det avgränsade område som denna IG realiserar, t.ex. "Fasta kontakter" eller "Öppenvårdsemiss".*
 
-*Välj ett kort, stabilt och beskrivande namn som speglar informationsmängden eller API:ets syfte, snarare än projekt-, organisations- eller versionsnamn. Domännamnet (canonical URL) ska ligga under en långsiktigt förvaltad Inera-domän, `https://fhir.inera.se/ig/<namn>`, och ska inte innehålla versionsnummer eftersom versioner hanteras i FHIR-paketet och Implementation Guidens metadata. Använd samma namn konsekvent i paketnamn, repository, canonical URL och dokumentation för att underlätta identifiering och återanvändning."*
+*Välj ett kort, stabilt och beskrivande namn som speglar informationsmängden eller API:ets syfte. Fastställ canonical URL enligt Region Stockholms URI-ramverk och kommande publiceringsstruktur innan den första publiceringen; den ska inte innehålla versionsnummer. Använd namnet konsekvent i paketnamn, repository, canonical URL och dokumentation.*
 
 ---
 
@@ -14,7 +14,7 @@
 
 ### Syfte
 
-*Beskriv målet med denna IG. Förklara vilket problem den löser och hur den passar in i det bredare Inera- och e-hälsolandskapet. Hänvisa till nationella eller regionala program, standarder eller mandat som motiverat arbetet.*
+*Beskriv målet med denna IG. Förklara vilket problem den löser och hur den passar in i det bredare regionala och nationella e-hälsolandskapet. Hänvisa till nationella eller regionala program, standarder eller mandat som motiverat arbetet.*
 
 ---
 
@@ -38,7 +38,7 @@ På [Inera Terminologitjänst](https://www.inera.se/tjanster/alla-tjanster-a-o/t
 
 ### Dokumentation
 
-Mer information om FHIR på Inera  finns [här](https://fhir.inera.se/). FHIR på Inera är en del av RIVTA – referensarkitekturen för svensk hälso- och sjukvård.
+Mer information om Region Stockholms arbete med FHIR finns på [Region Stockholm on FHIR](https://vardgivarguiden.se/it-stod/informatik/region-stockholm-on-fhir/).
 
 Information om hur denna IG förvaltas finns under [Om](about.html).
 

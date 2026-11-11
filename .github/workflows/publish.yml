@@ -1,7 +1,7 @@
 name: Build and publish IG
 
-# Branch builds to this repo's GitHub Pages. Releases are published by
-# release.yml. The workflow itself lives in Inera-AB/fhir-ig-workflows.
+# Branch previews go to this repo's GitHub Pages. No portal secret is
+# forwarded, so the shared workflow cannot update the Inera catalog.
 
 on:
   push:
@@ -18,4 +18,3 @@ permissions:
 jobs:
   build:
     uses: Inera-AB/fhir-ig-workflows/.github/workflows/build.yml@v1
-    secrets: inherit

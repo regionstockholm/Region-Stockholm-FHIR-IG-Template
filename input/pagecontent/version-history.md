@@ -1,4 +1,6 @@
-Den här sidan beskriver vad som har ändrats i varje version. Listan över alla publicerade versioner nås via länken i bannern överst på varje sida.
+Den här sidan beskriver historiska ändringar i mallen. Poster före övergången
+till Region Stockholm beskriver Ineras tidigare publiceringsflöde, inte det
+nuvarande. Taggbyggen i detta repo är inte officiella publiceringar.
 
 ---
 

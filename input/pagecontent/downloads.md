@@ -2,9 +2,10 @@ Följande nedladdningar är tillgängliga för denna Implementation Guide.
 
 ### Fullständigt IG-paket
 
-Det fullständiga npm-paketet för denna IG, för användning med FHIR-validatorn och andra verktyg:
-
-- [Paket (tgz)](https://fhir.inera.se/ig/template/package.tgz)
+Det fullständiga npm-paketet `package.tgz` finns i byggresultatets rotkatalog
+för användning med FHIR-validatorn och andra verktyg. Hämta taggbygget som
+artifact från GitHub Actions. Ett CI-bygge är inte en officiellt publicerad
+release.
 
 Se [Testning och validering](testing.html) för instruktioner om hur paketet används för att validera instanser mot profilerna i denna IG.
 
