@@ -1,5 +1,5 @@
 id: regionstockholm.core.template
-canonical: https://fhir.regionstockholm.se/ig/template
+canonical: https://pub.regionstockholm.se/fhir/ig/template
 name: RegionStockholmCoreTemplate
 title: "Region Stockholm FHIR Implementation Guide Template"
 description: "Mall för Region Stockholms FHIR Implementation Guides."
