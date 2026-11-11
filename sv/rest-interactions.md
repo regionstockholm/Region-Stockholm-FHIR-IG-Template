@@ -1,4 +1,4 @@
-# REST-interaktioner och sökparametrar - Inera FHIR Implementation Guide Template v2.3.0
+# REST-interaktioner och sökparametrar - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## REST-interaktioner och sökparametrar
 

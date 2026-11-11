@@ -3,7 +3,7 @@
 <Patient xmlns="http://hl7.org/fhir">
   <id value="IneraPatientExample"/>
   <meta>
-    <profile value="https://fhir.inera.se/ig/template/StructureDefinition/IneraPatient"/>
+    <profile value="https://pub.regionstockholm.se/fhir/ig/template/StructureDefinition/IneraPatient"/>
   </meta>
   <language value="sv"/>
   <text>

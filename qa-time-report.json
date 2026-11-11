@@ -1,28 +1,28 @@
 {
-  "date" : "Tue, 10 Nov, 2026 14:38:16 +0000",
+  "date" : "Wed, 11 Nov, 2026 12:26:21 +0000",
   "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
   "files" : [{
-    "name" : "/fsh-generated/resources/ImplementationGuide-inera.core.template.json",
-    "size" : 4222,
+    "name" : "/fsh-generated/resources/ImplementationGuide-regionstockholm.core.template.json",
+    "size" : 4338,
     "processes" : [{
       "activity" : "load",
-      "start" : 16,
-      "length" : 9
+      "start" : 14,
+      "length" : 8
     },
     {
       "activity" : "checkR4R4B",
-      "start" : 17,
+      "start" : 15,
       "length" : 8
     },
     {
       "activity" : "generateNarratives",
-      "start" : 17,
-      "length" : 54
+      "start" : 15,
+      "length" : 470
     },
     {
       "activity" : "validate",
       "start" : 18,
-      "length" : 2207
+      "length" : 1701
     },
     {
       "activity" : "scanForUsageStats",
@@ -32,85 +32,90 @@
     {
       "activity" : "generate1",
       "start" : 20,
-      "length" : 57
+      "length" : 97
     },
     {
       "activity" : "generate2",
       "start" : 22,
-      "length" : 42
+      "length" : 52
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 27,
+      "start" : 30,
       "length" : 1
     }]
   },
   {
     "name" : "fsh-generated/resources/Patient-IneraPatientExample.json",
-    "size" : 665,
+    "size" : 679,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 16,
+      "start" : 14,
       "length" : 3
     },
     {
-      "activity" : "load-configure",
-      "start" : 17,
+      "activity" : "load",
+      "start" : 14,
       "length" : 1
     },
     {
+      "activity" : "load-configure",
+      "start" : 15,
+      "length" : 2
+    },
+    {
+      "activity" : "checkR4R4B",
+      "start" : 15,
+      "length" : 2
+    },
+    {
       "activity" : "generateNarratives",
-      "start" : 17,
-      "length" : 109
+      "start" : 15,
+      "length" : 134
     },
     {
       "activity" : "validate",
       "start" : 20,
-      "length" : 7
+      "length" : 8
     },
     {
       "activity" : "generate1",
       "start" : 20,
-      "length" : 9
+      "length" : 12
     },
     {
       "activity" : "generate2",
       "start" : 22,
-      "length" : 17
+      "length" : 11
     }]
   },
   {
     "name" : "fsh-generated/resources/StructureDefinition-IneraPatient.json",
-    "size" : 3282,
+    "size" : 3296,
     "processes" : [{
       "activity" : "loadResources",
-      "start" : 16,
+      "start" : 14,
       "length" : 2
     },
     {
       "activity" : "load",
-      "start" : 16,
-      "length" : 7
+      "start" : 14,
+      "length" : 5
     },
     {
       "activity" : "generateSnapshots",
-      "start" : 16,
-      "length" : 43
-    },
-    {
-      "activity" : "loadDepInfo",
-      "start" : 17,
-      "length" : 1
+      "start" : 14,
+      "length" : 46
     },
     {
       "activity" : "generateNarratives",
-      "start" : 17,
-      "length" : 429
+      "start" : 16,
+      "length" : 1677
     },
     {
       "activity" : "validate",
       "start" : 17,
-      "length" : 400
+      "length" : 603
     },
     {
       "activity" : "checkConformanceResources",
@@ -125,32 +130,27 @@
     {
       "activity" : "generate1",
       "start" : 20,
-      "length" : 115
+      "length" : 114
     },
     {
       "activity" : "generate2",
       "start" : 22,
-      "length" : 983
+      "length" : 1346
     },
     {
       "activity" : "generate2",
       "start" : 23,
-      "length" : 935
+      "length" : 1722
     },
     {
       "activity" : "generateValidationPack",
-      "start" : 27,
-      "length" : 8
-    },
-    {
-      "activity" : "scanProfilesForR5",
-      "start" : 29,
-      "length" : 1
+      "start" : 30,
+      "length" : 9
     },
     {
       "activity" : "scanExamplesForR5",
-      "start" : 29,
-      "length" : 2
+      "start" : 33,
+      "length" : 1
     }]
   },
   {
@@ -168,7 +168,12 @@
   },
   {
     "name" : "/input/includes/fragment-header.html",
-    "size" : 197
+    "size" : 197,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 1
+    }]
   },
   {
     "name" : "/fsh-generated/includes/fsh-link-references.md",
@@ -185,16 +190,16 @@
   },
   {
     "name" : "/input/pagecontent/roles-and-responsibilities.md",
-    "size" : 1578,
+    "size" : 1578
+  },
+  {
+    "name" : "/input/pagecontent/error-handling.md",
+    "size" : 168,
     "processes" : [{
       "activity" : "generate2",
       "start" : 23,
       "length" : 1
     }]
-  },
-  {
-    "name" : "/input/pagecontent/error-handling.md",
-    "size" : 168
   },
   {
     "name" : "/input/pagecontent/version-history.md",
@@ -202,16 +207,26 @@
     "processes" : [{
       "activity" : "generate2",
       "start" : 23,
-      "length" : 2
+      "length" : 1
     }]
   },
   {
     "name" : "/input/pagecontent/testing.md",
-    "size" : 246
+    "size" : 246,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/use-cases.md",
-    "size" : 551
+    "size" : 551,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 20,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/expected-responses.md",
@@ -219,16 +234,16 @@
   },
   {
     "name" : "/input/pagecontent/rest-interactions.md",
-    "size" : 614
+    "size" : 614,
+    "processes" : [{
+      "activity" : "validate",
+      "start" : 20,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/capabilitystatement.md",
-    "size" : 476,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 23,
-      "length" : 1
-    }]
+    "size" : 476
   },
   {
     "name" : "/input/pagecontent/security.md",
@@ -236,24 +251,20 @@
   },
   {
     "name" : "/input/pagecontent/about.md",
-    "size" : 720
+    "size" : 720,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/pagecontent/information-basis.md",
-    "size" : 1191,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 23,
-      "length" : 1
-    }]
+    "size" : 1191
   },
   {
     "name" : "/input/pagecontent/index.md",
-    "size" : 3082
-  },
-  {
-    "name" : "/input/pagecontent/downloads.md",
-    "size" : 613,
+    "size" : 3082,
     "processes" : [{
       "activity" : "generate2",
       "start" : 23,
@@ -261,8 +272,17 @@
     }]
   },
   {
+    "name" : "/input/pagecontent/downloads.md",
+    "size" : 613
+  },
+  {
     "name" : "/input/pagecontent/introduction.md",
-    "size" : 1316
+    "size" : 1316,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 23,
+      "length" : 1
+    }]
   },
   {
     "name" : "/template/config",
@@ -270,12 +290,7 @@
   },
   {
     "name" : "/template/config/_config.yml",
-    "size" : 140,
-    "processes" : [{
-      "activity" : "validate",
-      "start" : 18,
-      "length" : 1
-    }]
+    "size" : 140
   },
   {
     "name" : "/input/images",
@@ -287,12 +302,7 @@
   },
   {
     "name" : "/input/images/region-stockholm.css",
-    "size" : 20907,
-    "processes" : [{
-      "activity" : "generate2",
-      "start" : 23,
-      "length" : 1
-    }]
+    "size" : 20907
   },
   {
     "name" : "/input/images/Region_Stockholm_svart_frizon.svg",
@@ -300,7 +310,12 @@
   },
   {
     "name" : "/input/images/sll-logo.svg",
-    "size" : 4648
+    "size" : 4648,
+    "processes" : [{
+      "activity" : "generate2",
+      "start" : 25,
+      "length" : 1
+    }]
   },
   {
     "name" : "/input/images/Region_Stockholm_vit_frizon.svg",

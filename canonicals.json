@@ -1,14 +1,14 @@
 [{
-  "id" : "inera.core.template",
+  "id" : "regionstockholm.core.template",
   "type" : "ImplementationGuide",
-  "url" : "https://fhir.inera.se/ig/template/ImplementationGuide/inera.core.template",
+  "url" : "https://pub.regionstockholm.se/fhir/ig/template/ImplementationGuide/regionstockholm.core.template",
   "version" : "2.3.0",
-  "name" : "IneraCoreTemplate"
+  "name" : "RegionStockholmCoreTemplate"
 },
 {
   "id" : "IneraPatient",
   "type" : "StructureDefinition",
-  "url" : "https://fhir.inera.se/ig/template/StructureDefinition/IneraPatient",
+  "url" : "https://pub.regionstockholm.se/fhir/ig/template/StructureDefinition/IneraPatient",
   "version" : "2.3.0",
   "name" : "IneraPatient"
 }]

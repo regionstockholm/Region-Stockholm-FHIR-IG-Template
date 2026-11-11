@@ -2,7 +2,7 @@
   "resourceType" : "Patient",
   "id" : "IneraPatientExample",
   "meta" : {
-    "profile" : ["https://fhir.inera.se/ig/template/StructureDefinition/IneraPatient"]
+    "profile" : ["https://pub.regionstockholm.se/fhir/ig/template/StructureDefinition/IneraPatient"]
   },
   "language" : "sv",
   "text" : {

@@ -1,4 +1,4 @@
-# Informationsunderlag - Inera FHIR Implementation Guide Template v2.3.0
+# Informationsunderlag - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## Informationsunderlag
 

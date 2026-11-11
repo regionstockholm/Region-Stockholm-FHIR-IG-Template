@@ -5,14 +5,14 @@
 
 # - resource -------------------------------------------------------------------
 
-<https://fhir.inera.se/ig/template/Patient/IneraPatientExample> a fhir:Patient ;
+<https://pub.regionstockholm.se/fhir/ig/template/Patient/IneraPatientExample> a fhir:Patient ;
   fhir:nodeRole fhir:treeRoot ;
   fhir:Resource.id [ fhir:value "IneraPatientExample"] ;
   fhir:Resource.meta [
      fhir:Meta.profile [
-       fhir:value "https://fhir.inera.se/ig/template/StructureDefinition/IneraPatient" ;
+       fhir:value "https://pub.regionstockholm.se/fhir/ig/template/StructureDefinition/IneraPatient" ;
        fhir:index -1 ;
-       fhir:link <https://fhir.inera.se/ig/template/StructureDefinition/IneraPatient>
+       fhir:link <https://pub.regionstockholm.se/fhir/ig/template/StructureDefinition/IneraPatient>
      ]
   ] ;
   fhir:Resource.language [ fhir:value "sv"] ;
@@ -50,7 +50,7 @@
 
 # - ontology header ------------------------------------------------------------
 
-<https://fhir.inera.se/ig/template/Patient/IneraPatientExample.ttl> a owl:Ontology ;
+<https://pub.regionstockholm.se/fhir/ig/template/Patient/IneraPatientExample.ttl> a owl:Ontology ;
   owl:imports fhir:fhir.ttl .
 
 # -------------------------------------------------------------------------------------

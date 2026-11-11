@@ -1,4 +1,4 @@
-# inera.core.template#2.3.0: Inera FHIR Implementation Guide Template(sv)
+# regionstockholm.core.template#2.3.0: Region Stockholm FHIR Implementation Guide Template(sv)
 
 ## Pages
 
@@ -27,7 +27,7 @@
 
 ### ImplementationGuides
 
-* [Inera FHIR Implementation Guide Template](ImplementationGuide-inera.core.template.md)
+* [Region Stockholm FHIR Implementation Guide Template](ImplementationGuide-regionstockholm.core.template.md)
 
 ### Examples
 

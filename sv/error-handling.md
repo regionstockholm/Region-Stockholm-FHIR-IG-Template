@@ -1,4 +1,4 @@
-# Felhantering - Inera FHIR Implementation Guide Template v2.3.0
+# Felhantering - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## Felhantering
 

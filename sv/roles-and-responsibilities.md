@@ -1,4 +1,4 @@
-# Roller och ansvar - Inera FHIR Implementation Guide Template v2.3.0
+# Roller och ansvar - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## Roller och ansvar
 

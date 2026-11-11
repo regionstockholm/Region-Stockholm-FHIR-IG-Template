@@ -1,4 +1,4 @@
-# Hem - Inera FHIR Implementation Guide Template v2.3.0
+# Hem - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## Hem
 

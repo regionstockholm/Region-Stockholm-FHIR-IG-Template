@@ -1,4 +1,4 @@
-# Säkerhet och behörighet - Inera FHIR Implementation Guide Template v2.3.0
+# Säkerhet och behörighet - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## Säkerhet och behörighet
 

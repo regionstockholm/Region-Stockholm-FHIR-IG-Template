@@ -1,4 +1,4 @@
-# Förväntade svar - Inera FHIR Implementation Guide Template v2.3.0
+# Förväntade svar - Region Stockholm FHIR Implementation Guide Template v2.3.0
 
 ## Förväntade svar
 
