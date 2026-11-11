@@ -1,8 +1,8 @@
-id: inera.core.template
-canonical: https://fhir.inera.se/ig/template
-name: IneraCoreTemplate
-title: "Inera FHIR Implementation Guide Template"
-description: "Mall för Ineras FHIR Implementation Guides."
+id: regionstockholm.core.template
+canonical: https://pub.regionstockholm.se/fhir/ig/template
+name: RegionStockholmCoreTemplate
+title: "Region Stockholm FHIR Implementation Guide Template"
+description: "Mall för Region Stockholms FHIR Implementation Guides."
 status: draft
 version: 2.3.0
 fhirVersion: 4.0.1
@@ -11,8 +11,8 @@ releaseLabel: ci-build
 license: CC0-1.0
 
 publisher:
-  name: Inera AB
-  url: https://www.inera.se
+  name: Region Stockholm
+  url: https://www.regionstockholm.se
 
 jurisdiction: urn:iso:std:iso:3166#SE "Sweden"
 
