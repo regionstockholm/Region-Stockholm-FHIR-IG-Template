@@ -2,8 +2,8 @@ RegionStockholmCoreTemplate : Validation Results
 =========================================
 
 err = 0, warn = 1, info = 5, broken links = 3
-IG Publisher Version: 3.0.3 Out of date - current version is null
-Generated Wed Nov 11 13:43:18 UTC 2026. FHIR version 4.0.1 for regionstockholm.core.template#2.3.0 (canonical = https://pub.regionstockholm.se/fhir/ig/template)
+IG Publisher Version: 3.0.3
+Generated Thu Nov 12 13:59:43 UTC 2026. FHIR version 4.0.1 for regionstockholm.core.template#2.3.0 (canonical = https://pub.regionstockholm.se/fhir/ig/template)
  Build Errors : 3 / 0 / 0
  /home/runner/work/Region-Stockholm-FHIR-IG-Template/Region-Stockholm-FHIR-IG-Template/fsh-generated/resources/ImplementationGuide-regionstockholm.core.template : 0 / 0 / 3
  /home/runner/work/Region-Stockholm-FHIR-IG-Template/Region-Stockholm-FHIR-IG-Template/fsh-generated/resources/Patient-IneraPatientExample : 0 / 1 / 1
