@@ -1,9 +1,9 @@
 // No need to set `meta.profile` manually: SUSHI populates it automatically from `InstanceOf`
-// (here, the canonical URL of IneraPatient), which is what declares conformance to the profile.
-Instance: IneraPatientExample
-InstanceOf: IneraPatient
-Title: "Inera Patient Example"
-Description: "A minimal example of a patient conforming to the IneraPatient profile."
+// (here, the canonical URL of RegionStockholmPatient), which declares conformance to the profile.
+Instance: RegionStockholmPatientExample
+InstanceOf: RegionStockholmPatient
+Title: "Region Stockholm Patient Example"
+Description: "A minimal example of a patient conforming to the RegionStockholmPatient profile."
 Usage: #example
 
 * identifier[personnummer].system = "http://electronichealth.se/identifier/personnummer"

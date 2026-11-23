@@ -2,6 +2,7 @@ name: Build and publish IG
 
 # Branch builds to this repo's GitHub Pages. Releases are published by
 # release.yml. The workflow itself lives in Inera-AB/fhir-ig-workflows.
+# Do not inherit FHIR_PORTAL_TOKEN: its default catalog is Inera's.
 
 on:
   push:
@@ -18,4 +19,3 @@ permissions:
 jobs:
   build:
     uses: Inera-AB/fhir-ig-workflows/.github/workflows/build.yml@v1
-    secrets: inherit

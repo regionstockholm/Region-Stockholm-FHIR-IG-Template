@@ -1,24 +1,24 @@
-// Naming convention: [prefix][ResourceType] in PascalCase, per Inera's profiling guidance.
-// Example: IneraPatient = prefix "Inera" + resource type "Patient".
-Profile: IneraPatient
+// Naming convention: [prefix][ResourceType] in PascalCase.
+// Example: RegionStockholmPatient = prefix "RegionStockholm" + resource type "Patient".
+Profile: RegionStockholmPatient
 Parent: Patient
-Id: IneraPatient
-Title: "Inera Patient"
+Id: RegionStockholmPatient
+Title: "Region Stockholm Patient"
 Description: """
-A template patient profile demonstrating Inera's FHIR profiling conventions.
+A template patient profile demonstrating FHIR profiling conventions for Region Stockholm.
 Authors should replace this description with the clinical purpose and scope of the profile.
 """
 
 * ^status = #draft
 * ^version = "0.1.0"
-// Metadata identifier: kept the same as the profile name/id, per Inera's profiling guidance.
-* ^identifier.value = "IneraPatient"
+// Metadata identifier: kept the same as the profile name/id.
+* ^identifier.value = "RegionStockholmPatient"
 // Update on every material change to the profile.
 * ^date = "2026-07-15"
-* ^publisher = "Inera AB"
-* ^contact.name = "Inera AB"
+* ^publisher = "Region Stockholm"
+* ^contact.name = "Region Stockholm"
 * ^contact.telecom.system = #url
-* ^contact.telecom.value = "https://www.inera.se"
+* ^contact.telecom.value = "https://www.regionstockholm.se"
 * ^jurisdiction = urn:iso:std:iso:3166#SE "Sweden"
 
 // Identifier slice: Swedish personal identity number (personnummer)
@@ -35,8 +35,8 @@ Authors should replace this description with the clinical purpose and scope of t
 * identifier ^short = "Patient identifiers, including Swedish personnummer"
 
 * identifier contains personnummer 0..1 MS
-// Identifier.system is required (1..1) whenever the Identifier datatype is used, per Inera's
-// profiling guidance, and fixed here to the canonical personnummer identifier system.
+// Identifier.system is required (1..1) in this slice and fixed to the canonical
+// personnummer identifier system.
 * identifier[personnummer].system 1..1
 * identifier[personnummer].system = "http://electronichealth.se/identifier/personnummer"
 * identifier[personnummer].value 1..1 MS

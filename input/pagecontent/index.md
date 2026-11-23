@@ -2,7 +2,7 @@
 
 *Ange ett namn som ringar in det avgränsade område som denna IG realiserar, t.ex. "Genomic Data Repository".*
 
-*Välj ett kort, stabilt och beskrivande namn som speglar informationsmängden eller API:ets syfte, snarare än projekt-, organisations- eller versionsnamn. Domännamnet (canonical URL) ska ligga under en långsiktigt förvaltad region Stockholm-domän, `https://pub.regionstockholm.se/fhir/ImplementationsGuide/<namn>`, och ska inte innehålla versionsnummer eftersom versioner hanteras i FHIR-paketet och Implementation Guidens metadata. Använd samma namn konsekvent i paketnamn, repository, canonical URL och dokumentation för att underlätta identifiering och återanvändning."*
+*Välj ett kort, stabilt och beskrivande namn som speglar informationsmängden eller API:ets syfte, snarare än projekt-, organisations- eller versionsnamn. Välj en långsiktigt förvaltad canonical URL under Region Stockholms domän och undvik versionsnummer i den. Versioner hanteras i FHIR-paketet och Implementation Guidens metadata. Använd samma namn konsekvent i paketnamn, repository, canonical URL och dokumentation.*
 
 ---
 
@@ -26,7 +26,7 @@
 
 ### Terminologi
 
-På [Inera Terminologitjänst](https://www.inera.se/tjanster/alla-tjanster-a-o/terminologitjanst-for-nationell-e-halsa/) finns alla refererade kodsystem och värdemängder som utvecklats av Inera.
+*Ange vilka kodsystem och värdemängder som används, vem som förvaltar dem och var de kan hämtas.*
 
 ---
 
@@ -38,7 +38,7 @@ På [Inera Terminologitjänst](https://www.inera.se/tjanster/alla-tjanster-a-o/t
 
 ### Dokumentation
 
-Mer information om FHIR inom region Stockholm finns [här](https://vardgivarguiden.se/it-stod/informatik/region-stockholm-on-fhir/).
+Mer information om FHIR inom Region Stockholm finns [här](https://vardgivarguiden.se/it-stod/informatik/region-stockholm-on-fhir/).
 
 Information om hur denna IG förvaltas finns under [Om](about.html).
 

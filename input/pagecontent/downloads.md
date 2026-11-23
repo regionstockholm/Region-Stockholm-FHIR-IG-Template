@@ -4,7 +4,7 @@ Följande nedladdningar är tillgängliga för denna Implementation Guide.
 
 Det fullständiga npm-paketet för denna IG, för användning med FHIR-validatorn och andra verktyg:
 
-- [Paket (tgz)](https://fhir.inera.se/ig/template/package.tgz)
+- [Paket (tgz)](https://pub.regionstockholm.se/fhir/ig/template/package.tgz)
 
 Se [Testning och validering](testing.html) för instruktioner om hur paketet används för att validera instanser mot profilerna i denna IG.
 

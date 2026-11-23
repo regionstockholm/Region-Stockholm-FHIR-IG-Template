@@ -1,9 +1,7 @@
 name: Publish release
 
-# Publishes a release with IG Publisher's publication mode. A release tag
-# (no "v" prefix: 1.2.0, 1.2.0-rc1) publishes to fhir.inera.se; a manual run
-# on a branch publishes to the test web root. The workflow itself lives in
-# Inera-AB/fhir-ig-workflows.
+# Release publication is blocked until Region Stockholm has configured its
+# own web roots and credentials. See docs/forbereda-och-releasa-ig.md.
 
 on:
   push:
@@ -17,10 +15,9 @@ permissions:
 
 jobs:
   release:
-    uses: Inera-AB/fhir-ig-workflows/.github/workflows/release.yml@v1
-    # The template is published on fhir.inera.se as an example but kept out
-    # of the FHIR package registry. An IG made from the template removes
-    # these two lines so that its packages reach packages.fhir.org.
-    with:
-      package-feed: false
-    secrets: inherit
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop unconfigured publication
+        run: |
+          echo "::error::Region Stockholms publiceringsmål är inte konfigurerat. Se docs/forbereda-och-releasa-ig.md."
+          exit 1

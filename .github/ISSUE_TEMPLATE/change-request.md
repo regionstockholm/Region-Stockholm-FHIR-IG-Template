@@ -5,7 +5,7 @@ labels: change-request
 ---
 
 **FHIR-resurs / element**
-<!-- Vilken profil, extension, valuemängd eller kodsystem gäller det? t.ex. IneraPatient.identifier -->
+<!-- Vilken profil, extension, valuemängd eller kodsystem gäller det? t.ex. RegionStockholmPatient.identifier -->
 
 **Föreslagen ändring**
 <!-- Beskriv ändringen tydligt. Visa gärna före/efter om det är strukturellt. -->
@@ -22,4 +22,4 @@ labels: change-request
 - [ ] Önskvärd
 
 **Referenser**
-<!-- Länkar till FHIR-specifikationer, Inera-dokumentation, kliniska guidelines o.s.v. -->
+<!-- Länkar till FHIR-specifikationer, Region Stockholms dokumentation, kliniska riktlinjer o.s.v. -->

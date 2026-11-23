@@ -5,7 +5,7 @@ labels: bug
 ---
 
 **FHIR-resurstyp**
-<!-- Vilken profil eller resurs gäller det? t.ex. IneraPatient, StructureDefinition-IneraPatient -->
+<!-- Vilken profil eller resurs gäller det? t.ex. RegionStockholmPatient, StructureDefinition-RegionStockholmPatient -->
 
 **Aktuellt beteende**
 <!-- Vad definierar IG:n idag, eller vad rapporterar validatorn? Klistra gärna in felmeddelandet. -->

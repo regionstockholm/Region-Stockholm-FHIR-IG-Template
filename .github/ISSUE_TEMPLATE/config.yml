@@ -1,8 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: Inera FHIR Landing Page
-    url: https://www.inera.se/fhir
-    about: Allmänna frågor om Ineras FHIR-standarder och konformitetskrav
-  - name: Inera Terminologitjänst
-    url: https://www.inera.se/tjanster/alla-tjanster-a-o/terminologitjanst-for-nationell-e-halsa/
-    about: Frågor om CodeSystems och ValueSets förvaltade av Inera
+  - name: Region Stockholm on FHIR
+    url: https://vardgivarguiden.se/it-stod/informatik/region-stockholm-on-fhir/
+    about: Information om Region Stockholms arbete med FHIR
