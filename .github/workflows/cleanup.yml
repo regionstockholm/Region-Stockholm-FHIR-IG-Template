@@ -7,5 +7,15 @@ permissions:
   contents: write
 
 jobs:
+  # Exempel på tidigare anrop. Byt till Region Stockholms repository när
+  # det egna workflowet för städning är konfigurerat och återställ då
+  # contents: write om det behövs.
+  # cleanup:
+  #   uses: Inera-AB/fhir-ig-workflows/.github/workflows/cleanup.yml@v1
   cleanup:
-    uses: Inera-AB/fhir-ig-workflows/.github/workflows/cleanup.yml@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop unconfigured branch cleanup
+        run: |
+          echo "::error::Region Stockholms workflow för städning av branchbyggen är inte konfigurerat. Se docs/forbereda-och-releasa-ig.md."
+          exit 1
