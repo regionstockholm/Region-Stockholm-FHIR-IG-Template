@@ -10,5 +10,11 @@ permissions:
   contents: read
 
 jobs:
+  # Aktivera anropet till Region Stockholms delade workflow när det är konfigurerat.
   validate:
-    uses: Inera-AB/fhir-ig-workflows/.github/workflows/validate.yml@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop unconfigured FSH validation
+        run: |
+          echo "::error::Region Stockholms workflow för FSH-validering är inte konfigurerat. Se docs/forbereda-och-releasa-ig.md."
+          exit 1
