@@ -1,6 +1,6 @@
 # Versionshantering, brancher och releaser
 
-Den här vägledningen gäller IG:er som bygger på Region Stockholms mall. Publicering till en regional webbrot är ännu inte konfigurerad; se [förberedelserna](forbereda-och-releasa-ig.md).
+Den här vägledningen gäller IG:er som bygger på Region Stockholms mall. Branch- och releasepublicering är ännu inte konfigurerade; se [förberedelserna](forbereda-och-releasa-ig.md).
 
 ## Versioner
 
@@ -12,14 +12,14 @@ Använd semantisk versionering: öka major vid bakåtinkompatibla ändringar, mi
 
 | Branch eller händelse | Syfte |
 |---|---|
-| `main` | Stabil grund för releaser och repositoryts huvudsida på GitHub Pages |
+| `main` | Stabil grund för releaser och, när publiceringen är konfigurerad, repositoryts huvudsida på GitHub Pages |
 | `develop` | Integration av kommande ändringar |
 | `feature/**` | Arbete som normalt integreras via pull request till `develop` |
 | `support/<M>.x` | Underhåll av en äldre majorversion |
 | Pull request | SUSHI-validering och IG Publisher QA |
-| Tagg `X.Y.Z` eller `X.Y.Z-rcN` | Releaseworkflowet startar men avbryter tills regional publicering konfigurerats |
+| Push till branch eller tagg `X.Y.Z` eller `X.Y.Z-rcN` | Publiceringsworkflowet startar men avbryter tills regional publicering konfigurerats |
 
-Branchbyggen publiceras på repositoryts egna GitHub Pages, normalt `https://regionstockholm.github.io/<repo>/` för `main` och under `branches/` för övriga brancher. Det delade workflowet kommer från Inera; inga ärvda hemligheter skickas med till branchbygget.
+När branchpubliceringen är konfigurerad kan byggen publiceras på repositoryts egna GitHub Pages, normalt `https://regionstockholm.github.io/<repo>/` för `main` och under `branches/` för övriga brancher.
 
 ## Förbereda en release
 

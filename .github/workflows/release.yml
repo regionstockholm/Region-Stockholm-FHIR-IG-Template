@@ -1,7 +1,8 @@
 name: Publish release
 
-# Release publication is blocked until Region Stockholm has configured its
-# own web roots and credentials. See docs/forbereda-och-releasa-ig.md.
+# Ineras delade workflow finns i ett separat repository som Inera äger.
+# Sätt upp motsvarande repository inom Region Stockholm och ändra anropet
+# nedan så att det pekar dit. Se docs/forbereda-och-releasa-ig.md.
 
 on:
   push:
@@ -14,6 +15,13 @@ permissions:
   contents: read
 
 jobs:
+  # Exempel på tidigare anrop; anpassa och aktivera först när Region
+  # Stockholms workflow, webbrot och behörigheter är konfigurerade.
+  # release:
+  #   uses: Inera-AB/fhir-ig-workflows/.github/workflows/release.yml@v1
+  #   with:
+  #     package-feed: false
+  #   secrets: inherit
   release:
     runs-on: ubuntu-latest
     steps:

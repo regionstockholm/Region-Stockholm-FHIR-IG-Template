@@ -8,4 +8,4 @@ Den här vägledningen gäller en befintlig IG som ska använda Region Stockholm
 4. Planera eventuell flytt av publiceringsadress separat med ansvarig förvaltning. Byte av canonical eller paket-id kan påverka referenser, paket och konsumenter och kräver en uttrycklig migrationsplan.
 5. Bevara och verifiera befintlig versionshistorik i den nya publiceringsmiljön innan en release görs.
 
-Mallens releaseworkflow är spärrat tills en regional publiceringslösning är konfigurerad. Se [förberedelser för publicering](forbereda-och-releasa-ig.md); använd inte Ineras standarddestinationer för en regional release.
+Mallens branch- och releasepublicering är spärrad tills en regional publiceringslösning är konfigurerad. Se [förberedelser för publicering](forbereda-och-releasa-ig.md).

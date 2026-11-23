@@ -5,9 +5,9 @@
 [![FHIR R4](https://img.shields.io/badge/FHIR-R4-blue)](https://hl7.org/fhir/R4/)
 [![License: CC0-1.0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-En GitHub-mall för Region Stockholms FHIR Implementation Guides (IG). Den innehåller en sidstruktur, vägledning för författare, en exempelprofil i FHIR Shorthand (FSH) och workflows för validering och branchbyggen.
+En GitHub-mall för Region Stockholms FHIR Implementation Guides (IG). Den innehåller en sidstruktur, vägledning för författare, en exempelprofil i FHIR Shorthand (FSH) och workflowfiler för validering och publicering.
 
-Mallen bygger på [Ineras FHIR-mall](https://github.com/Inera-AB/IneraFHIRTemplate). De delade bygg- och valideringsworkflowen används fortfarande från [Inera-AB/fhir-ig-workflows](https://github.com/Inera-AB/fhir-ig-workflows); de är tekniska beroenden, inte Region Stockholms publiceringsmål.
+Mallen bygger på [Ineras FHIR-mall](https://github.com/Inera-AB/IneraFHIRTemplate).
 
 ## Utformning
 
@@ -22,15 +22,15 @@ Region Stockholms grafik och format finns i `input/includes/fragment-header.html
 3. Ange samma paket-id i `ig.ini`, i sökvägen `fsh-generated/resources/ImplementationGuide-<id>.json`.
 4. Ersätt exempelprofilen och exempelinstansen i `input/fsh/` och fyll i sidorna i `input/pagecontent/`. Uppdatera paketlänken i `downloads.md` och motsvarande undantag i `input/ignoreWarnings.txt` utifrån den nya canonical-adressen.
 5. Anpassa `publication-request.json`, inklusive titel, beskrivning och `ci-build`. Första publiceringen av en ny IG använder `"first": true`. Bekräfta även kategori och övriga registeruppgifter med publiceringsansvarig.
-6. Ge GitHub Actions skrivbehörighet till repositoryts innehåll under **Settings → Actions → General → Workflow permissions**. Aktivera därefter GitHub Pages från `gh-pages` / `(root)` under **Settings → Pages**, när första bygget har skapat branchen. Skapa gärna en `develop`-branch.
+6. Konfigurera Region Stockholms delade workflows och publiceringsmiljö enligt [förberedelserna för publicering](docs/forbereda-och-releasa-ig.md). Skapa gärna en `develop`-branch.
 
 Mallens canonical `https://pub.regionstockholm.se/fhir/ig/template` och paketlänk är konfiguration, inte en garanti för att webbplatsen är driftsatt. Fastställ adress och publiceringsmiljö innan första publiceringen.
 
 ## Arbetsflöde och publicering
 
-Skapa en `feature/`-branch från `develop`, ändra FSH och dokumentation, och öppna en pull request mot `develop`. `validate.yml` kör SUSHI och `pr-qa.yml` bygger IG:n och rapporterar QA. `publish.yml` bygger `main`, `develop`, `feature/**` och `support/**` till repositoryts egen GitHub Pages; `cleanup.yml` tar bort bygget när en branch tas bort. Pages-adressen är normalt `https://regionstockholm.github.io/<repo>/`, med branchbyggen under `branches/`.
+Skapa en `feature/`-branch från `develop`, ändra FSH och dokumentation, och öppna en pull request mot `develop`. `validate.yml` är avsett att köra SUSHI och `pr-qa.yml` att bygga IG:n och rapportera QA. De och `cleanup.yml` använder fortfarande delade workflows från mallens ursprungliga repository och ska flyttas till Region Stockholms motsvarighet när den finns.
 
-**Releasepublicering är inte konfigurerad.** `release.yml` avbryter med ett tydligt fel vid releasetagg eller manuell körning. Det hindrar publicering till Ineras förvalda webbrot. Branchbygget är fortfarande beroende av Ineras delade workflow, men skickar inte vidare några ärvda hemligheter och kan därför inte uppdatera dess förvalda IG-katalog. Se [förberedelser för publicering](docs/forbereda-och-releasa-ig.md) innan releaseflödet aktiveras.
+**Publiceringsflödena är inte konfigurerade.** `publish.yml` och `release.yml` visar de tidigare anropen som kommenterade exempel och ger ett tydligt fel tills Region Stockholms motsvarighet har satts upp. De publicerar alltså varken branchbyggen eller releaser i nuläget. Se [förberedelser för publicering](docs/forbereda-och-releasa-ig.md) för hur flödena aktiveras.
 
 Ytterligare vägledning:
 
@@ -62,7 +62,7 @@ java -jar input-cache/publisher.jar -ig ig.ini
 
 | Sökväg | Innehåll |
 |---|---|
-| `.github/workflows/` | Validering, QA, branchbyggen, städning och spärrad release |
+| `.github/workflows/` | Validering, QA och städning samt exempel för branch- och releasepublicering |
 | `docs/` | Vägledning för versionering, migrering och publicering |
 | `sushi-config.yaml`, `ig.ini` | IG:ns metadata och byggkonfiguration |
 | `publication-request.json` | Metadata för en framtida release |

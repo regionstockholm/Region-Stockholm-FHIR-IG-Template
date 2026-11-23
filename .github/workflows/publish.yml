@@ -1,8 +1,8 @@
 name: Build and publish IG
 
-# Branch builds to this repo's GitHub Pages. Releases are published by
-# release.yml. The workflow itself lives in Inera-AB/fhir-ig-workflows.
-# Do not inherit FHIR_PORTAL_TOKEN: its default catalog is Inera's.
+# Ineras delade workflow finns i ett separat repository som Inera äger.
+# Sätt upp motsvarande repository inom Region Stockholm och ändra anropet
+# nedan så att det pekar dit. Se docs/forbereda-och-releasa-ig.md.
 
 on:
   push:
@@ -17,5 +17,14 @@ permissions:
   contents: write
 
 jobs:
+  # Exempel på tidigare anrop; anpassa och aktivera först när Region
+  # Stockholms workflow och publiceringsmål är konfigurerade.
+  # build:
+  #   uses: Inera-AB/fhir-ig-workflows/.github/workflows/build.yml@v1
   build:
-    uses: Inera-AB/fhir-ig-workflows/.github/workflows/build.yml@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop unconfigured branch publication
+        run: |
+          echo "::error::Region Stockholms workflow för branchpublicering är inte konfigurerat. Se docs/forbereda-och-releasa-ig.md."
+          exit 1

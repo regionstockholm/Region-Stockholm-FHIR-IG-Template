@@ -1,6 +1,6 @@
 # Förbereda en IG för publicering och göra en release
 
-Branchbyggen kan publiceras till det egna repositoryts GitHub Pages. **Releasepublicering är däremot spärrad** i `.github/workflows/release.yml` tills Region Stockholms egna publiceringsmål och behörigheter har fastställts. En tagg eller manuell körning ger ett fel och publicerar ingenting.
+Branch- och releasepublicering är ännu inte konfigurerade. `.github/workflows/publish.yml` och `.github/workflows/release.yml` innehåller de tidigare anropen som kommenterade exempel samt tillfälliga jobb som ger ett tydligt fel. En push, tagg eller manuell körning som utlöser dem publicerar ingenting.
 
 ## Förbered IG:n
 
@@ -9,13 +9,29 @@ Branchbyggen kan publiceras till det egna repositoryts GitHub Pages. **Releasepu
 3. Ersätt mallens profiler och exempelsidor, ange förvaltning och kontaktvägar samt uppdatera paketlänken och motsvarande rad i `input/ignoreWarnings.txt`.
 4. Granska QA-resultatet och säkerställ att externa FHIR-paket är låsta till publicerade versioner. För en annan FHIR-version än R4 ska även terminologiserver och beroenden ses över.
 
-## Konfigurera regional publicering
+## 1. Sätt upp ett regionalt workflow-repository
 
-Ansvarig förvaltning behöver först bestämma produktions- och testmiljö, webbadresser, åtkomst, paketdistribution och eventuell registrering i FHIR:s register. Mallens canonical är inte i sig bevis för att en webbrot eller ett paketflöde finns.
+De tidigare anropen använder [Inera-AB/fhir-ig-workflows](https://github.com/Inera-AB/fhir-ig-workflows), ett separat repository som ägs av Inera. Använd det som förlaga för ett motsvarande repository som Region Stockholm äger och förvaltar. Säkerställ tillgång till både `.github/workflows/` och `actions/`: de delade workflowen använder egna actions för bland annat verktygsinstallation, QA och publiceringsfiler.
 
-Det återanvändbara [releaseworkflowet från Inera](https://github.com/Inera-AB/fhir-ig-workflows) har Ineras repositoryn som standardvärden. Om det ska användas måste en regional lösning för IG Publishers webbrot, layoutregler och övriga gemensamma filer finnas och testas. Kontrollera särskilt att paket-id och canonical matchar layouten. Ange uttryckligen `web-repo`, `test-web-repo`, och vid behov `web-branch` och `web-dir`; använd inte Ineras standardvärden. Konfigurera en hemlighet med minsta nödvändiga behörighet för de regionala repositoryna och förmedla den endast till det avsedda workflowet. Besluta separat om `package-feed` och eventuell registrering på packages.fhir.org.
+1. Skapa eller välj ett regionalt repository för de delade workflowen och actions. Överför och granska innehållet, inklusive beroenden och uppdateringsrutiner.
+2. Ändra interna `uses:`-referenser som fortfarande pekar på ursprungsrepositoryt, till exempel `actions/setup-ig-tools`, `actions/qa-comment`, `actions/history-assets` och `actions/package-feed-exclude`, så att de pekar på regionens repository. Kontrollera även övriga externa actions och behörigheter.
+3. Granska förvalda repositoryn, URL:er och hemligheter i workflowen. `build.yml` har ett förvalt katalogrepository och `release.yml` har förvalda webbroot-repositoryn som tillhör Inera. Byt dessa till regionens konfiguration eller kräv uttryckliga regionala värden; ärv inte produktionshemligheter i onödan.
+4. Publicera en stabil referens, exempelvis en tagg, och säkerställ att de IG-repositoryn som ska använda workflowen har åtkomst och att organisationens Actions-policy tillåter dem.
 
-Ersätt först därefter spärrjobbet i `release.yml` med ett godkänt regionalt releaseflöde. Dokumentera dess konkreta inställningar, begränsningar och kontrollsteg här. Aktivera inte releasepublicering genom att enbart ta bort spärren.
+## 2. Förbered regionala publiceringsmål
+
+Ansvarig förvaltning behöver bestämma produktions- och testmiljö, webbadresser, åtkomst, paketdistribution och eventuell registrering i FHIR:s register. Mallens canonical är inte i sig bevis för att en webbrot eller ett paketflöde finns.
+
+För release med IG Publishers publiceringsläge behövs en kompatibel regional webbrot med layoutregler och gemensamma publiceringsfiler. Kontrollera att paket-id och canonical matchar layouten, att historik och eventuella paketflöden hanteras och att test- och produktionsmiljö är separerade. Besluta om `package-feed` och eventuell registrering på packages.fhir.org. Upprätta de hemligheter som det regionala workflowet kräver med minsta nödvändiga behörighet till rätt regionala repositoryn.
+
+För branchbyggen behöver IG-repositoryts Actions ha skrivbehörighet till innehållet. När det regionala byggworkflowet har skapat branchen `gh-pages`, aktivera GitHub Pages under **Settings → Pages**, med `gh-pages` / `(root)` som källa. Om en regional IG-katalog ska uppdateras måste även dess repository och åtkomst konfigureras; annars ska kataloguppdateringen vara avstängd.
+
+## 3. Aktivera anropen i IG-repositoryt
+
+1. I `.github/workflows/publish.yml`, ersätt det tillfälliga feljobbet med det kommenterade `build`-anropet. Ändra `uses:` så att det pekar på regionens repository och godkända referens. Anpassa exempelvis `catalog-repo` och hemligheter enligt det regionala workflowets gränssnitt.
+2. I `.github/workflows/release.yml`, ersätt på samma sätt feljobbet med det kommenterade `release`-anropet. Ändra `uses:` till regionens repository och ange de regionala indata som krävs, exempelvis `web-repo`, `test-web-repo` och vid behov `web-branch` och `web-dir`. Raden `package-feed: false` är ett exempel för en mall; besluta separat vad som gäller för varje IG. Ersätt `secrets: inherit` med uttrycklig överföring av nödvändiga hemligheter när gränssnittet tillåter det.
+3. Ändra även anropen i `validate.yml`, `pr-qa.yml` och `cleanup.yml` till regionens motsvarande workflows. De använder tills dess fortfarande ursprungsrepositoryt.
+4. Testa validering och QA i en pull request, branchbygge och GitHub Pages samt en manuell testpublicering till den regionala testmiljön. Kontrollera loggar, genererad IG och publiceringsmål innan release tillåts. Dokumentera de fastställda regionala adresserna, inställningarna och kontrollstegen.
 
 ## När releaseflödet finns
 
