@@ -9,5 +9,14 @@ permissions:
   pull-requests: write
 
 jobs:
+  # Exempel på tidigare anrop. Byt till Region Stockholms repository och
+  # aktivera anropet när det egna workflowet för PR-kontroll är konfigurerat.
+  # qa:
+  #   uses: Inera-AB/fhir-ig-workflows/.github/workflows/pr-qa.yml@v1
   qa:
-    uses: Inera-AB/fhir-ig-workflows/.github/workflows/pr-qa.yml@v1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Stop unconfigured PR QA
+        run: |
+          echo "::error::Region Stockholms workflow för IG Publisher QA på pull requests är inte konfigurerat. Se docs/forbereda-och-releasa-ig.md."
+          exit 1
